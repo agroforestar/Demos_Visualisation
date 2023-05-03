@@ -92,6 +92,7 @@ public class Tractors : MonoBehaviour
             if(char.IsDigit(_newParcelle.transform.GetChild(i).name[0]))
                 _anglesTractor.Add(_newParcelle.transform.GetChild(i).gameObject);
         }
+        _anglesTractor = _anglesTractor.OrderBy(x => int.Parse(x.name)).ToList();
     }
 
     GameObject MoveTractor(Vector3 actualPosition)
@@ -174,8 +175,7 @@ public class Tractors : MonoBehaviour
 
     IEnumerator TractorMovement()
     {
-        float desiredTime = TractorInitialisation ? 2f : 0.5f;
-        float actualTime = 0f;
+        float speed = TractorInitialisation ? 0.25f : 0.75f;
 
         if (!_spawnTractor)
             yield return null;
@@ -190,23 +190,21 @@ public class Tractors : MonoBehaviour
                 if (!TractorInitialisation)
                     _tractorMove = false;
             }
+
+            _newtractor.transform.position = Vector3.MoveTowards(_newtractor.transform.position, _anglesTractor[_tractorTargetAngles+1].transform.position, Time.deltaTime * speed);
             
-            if (actualTime < desiredTime)
-            {
-                _newtractor.transform.position = Vector3.Lerp(_newtractor.transform.position, _anglesTractor[_tractorTargetAngles+1].transform.position, actualTime / desiredTime);
-                actualTime += Time.deltaTime;
-                yield return null;
-            }
-            else
-            {
+            float distance = Vector3.Distance(_newtractor.transform.position, _anglesTractor[_tractorTargetAngles+1].transform.position);
+          
+            if (distance < 0.001f)
                 _tractorTargetAngles++;
-                actualTime = 0f;
-            }
+
+            yield return null;
         }
         if (!TractorInitialisation)
         {
             _newtractor.GetComponent<MeshRenderer>().enabled = true;
             TractorInitialisation = true;
+            _newtractor.GetComponent<CollisionTractor>().SetTextureRed();
         }
     }
     

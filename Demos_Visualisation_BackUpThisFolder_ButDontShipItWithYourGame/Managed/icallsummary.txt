@@ -387,6 +387,7 @@ UnityEngine.CullingGroup::SetDistanceReferencePoint_InternalVector3_Injected
 UnityEngine.CullingGroup::set_targetCamera
 UnityEngine.Cursor::SetCursor_Injected
 UnityEngine.Cursor::get_lockState
+UnityEngine.Debug::get_isDebugBuild
 UnityEngine.Debug::ExtractStackTraceNoAlloc
 UnityEngine.DebugLogHandler::Internal_Log
 UnityEngine.DebugLogHandler::Internal_LogException
@@ -819,6 +820,7 @@ UnityEngine.PlayerPrefs::GetFloat
 UnityEngine.PlayerPrefs::GetString
 UnityEngine.PlayerPrefs::DeleteAll
 UnityEngine.PlayerPrefs::DeleteKey
+UnityEngine.PlayerPrefs::Save
 UnityEngine.Profiling.Profiler::GetRuntimeMemorySizeLong
 UnityEngine.PropertyNameUtils::PropertyNameFromString_Injected
 UnityEngine.QualitySettings::get_billboardsFaceCameraPosition
