@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -10,7 +11,7 @@ public class CollisionTractor : MonoBehaviour
 {
 
     private List<GameObject> _trees = new List<GameObject>();
-    private readonly List<RaycastHit> _positions = new List<RaycastHit>();
+    private readonly ConcurrentBag<RaycastHit> _positions = new ConcurrentBag<RaycastHit>();
 
     private Texture2D _texture;
 
@@ -18,13 +19,13 @@ public class CollisionTractor : MonoBehaviour
     
     void Start()
     {
-        _positions.Clear();
-        _trees = GameObject.FindGameObjectsWithTag("tree").ToList();
         var original =  GameObject.Find("Manager").GetComponent<Tractors>().texturePath;
         _texture = new Texture2D(original.width, original.height, original.format, false);
         _texture.SetPixels(original.GetPixels());
         _texture.Apply();
         ARManager._newParcelle.GetComponent<Renderer>().material.mainTexture = _texture;
+        
+        _trees = GameObject.FindGameObjectsWithTag("tree").ToList();
         _treeRender = new MeshRenderer[_trees.Count];
         for (int i = 0; i < _trees.Count; i++)
         {
@@ -35,15 +36,10 @@ public class CollisionTractor : MonoBehaviour
     public IEnumerator AnalysePath()
     {
         RaycastHit hit = new RaycastHit();
-        MeshRenderer renderer = null;
-
+        Ray ray = new Ray();
+        
         if (!Tractors.TractorInitialisation)
-        {
-            Ray ray = new Ray(transform.position, -transform.up);
-
-            if (Physics.Raycast(ray, out hit))
-                renderer = hit.collider.GetComponent<MeshRenderer>();
-        }
+            ray = new Ray(transform.position, -transform.up);
 
         Vector3 pointOne = gameObject.transform.position;
 
@@ -57,7 +53,7 @@ public class CollisionTractor : MonoBehaviour
             {
                 if (!Tractors.TractorInitialisation)
                 {
-                    if (renderer != null)
+                    if (Physics.Raycast(ray, out hit))
                         _positions.Add(hit);
                 }
                 else
@@ -71,8 +67,8 @@ public class CollisionTractor : MonoBehaviour
     {
         print(_positions.Count);
         
-        int width = 150;
-        int height = 150;
+        int width = 125;
+        int height = 125;
         
         foreach (var hit in _positions)
         {

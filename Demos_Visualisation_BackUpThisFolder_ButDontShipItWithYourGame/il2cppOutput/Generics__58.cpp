@@ -1269,6 +1269,11 @@ struct SystemThreadingTasks_FutureDebugView_1_t0A2C86DE3F158F7ADB57D68A1E590E7BD
 {
 };
 
+// System.Threading.SystemThreading_ThreadLocalDebugView`1<System.Object>
+struct SystemThreading_ThreadLocalDebugView_1_t24537EA4A8C7E42AE9EC96173095674C63E36118  : public RuntimeObject
+{
+};
+
 // TMPro.TMP_ListPool`1<System.Object>
 struct TMP_ListPool_1_t92D405862E63EAF656FD652FDADDF89F9416EF4E  : public RuntimeObject
 {
@@ -5720,6 +5725,10 @@ struct List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D_StaticFields
 // System.Threading.Tasks.SystemThreadingTasks_FutureDebugView`1<System.Object>
 
 // System.Threading.Tasks.SystemThreadingTasks_FutureDebugView`1<System.Object>
+
+// System.Threading.SystemThreading_ThreadLocalDebugView`1<System.Object>
+
+// System.Threading.SystemThreading_ThreadLocalDebugView`1<System.Object>
 
 // TMPro.TMP_ListPool`1<System.Object>
 struct TMP_ListPool_1_t92D405862E63EAF656FD652FDADDF89F9416EF4E_StaticFields
@@ -23857,6 +23866,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SubsystemWithProvider_3__ctor_mEC13729FA
 		return;
 	}
 }
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif

@@ -44,6 +44,7 @@ public class Tractors : MonoBehaviour
         
         _camera = FindObjectOfType<Camera>();
         
+        
     }
 
     // Update is called once per frame
@@ -51,7 +52,7 @@ public class Tractors : MonoBehaviour
     {
         if (!_spawnTractor)
             return;
-
+        
         if (Input.touchCount < 1)
             return;
         
@@ -72,6 +73,7 @@ public class Tractors : MonoBehaviour
                         Vector3 pos = hit.point;
                         var anchor = MoveTractor(pos);
                         _newtractor.transform.localPosition = anchor.transform.localPosition;
+                        _newtractor.transform.rotation = anchor.transform.rotation;
                         _tractorMove = false;
                     }
                 }
@@ -141,6 +143,11 @@ public class Tractors : MonoBehaviour
         _tractorMove = !_tractorMove;
         
         EventSystem.current.currentSelectedGameObject.GetComponentInChildren<TextMeshProUGUI>().text = _tractorMove ? "Stop" : "Play";
+
+        if (_tractorMove)
+            _newtractor.GetComponent<Animator>().enabled = true;
+        else
+            _newtractor.GetComponent<Animator>().enabled = false;
         
         StartCoroutine(TractorMovement());
     }
@@ -165,13 +172,12 @@ public class Tractors : MonoBehaviour
         _spawnTractor = true;
         _sizePanel.SetActive(false);
 
-        _newtractor.GetComponent<MeshRenderer>().enabled = false;
+        foreach (var renderer in  _newtractor.GetComponentsInChildren<MeshRenderer>())
+            renderer.enabled = false;
 
         TractorInitialisation = false;
         _tractorMove = true;
         StartCoroutine(TractorMovement());
-
-        
     }
 
     IEnumerator TractorMovement()
@@ -192,21 +198,26 @@ public class Tractors : MonoBehaviour
                     _tractorMove = false;
             }
 
-            _newtractor.transform.position = Vector3.MoveTowards(_newtractor.transform.position, _anglesTractor[_tractorTargetAngles+1].transform.position, Time.deltaTime * speed);
-            _newtractor.transform.rotation = Quaternion.Lerp(_newtractor.transform.rotation, _anglesTractor[_tractorTargetAngles + 1].transform.rotation, Time.deltaTime * 5);
+            StartCoroutine(_newtractor.GetComponent<CollisionTractor>().AnalysePath());
             
-            float distance = Vector3.Distance(_newtractor.transform.position, _anglesTractor[_tractorTargetAngles+1].transform.position);
+            var position = _newtractor.transform.position;
+            position = Vector3.MoveTowards(position, _anglesTractor[_tractorTargetAngles+1].transform.position, Time.deltaTime * speed);
+            _newtractor.transform.position = position;
+            
+            _newtractor.transform.rotation = Quaternion.Lerp(_newtractor.transform.rotation, _anglesTractor[_tractorTargetAngles + 1].transform.rotation, Time.deltaTime * 7);
+            
+            float distance = Vector3.Distance(position, _anglesTractor[_tractorTargetAngles+1].transform.position);
           
             if (distance < 0.001f)
                 _tractorTargetAngles++;
             
-            StartCoroutine(_newtractor.GetComponent<CollisionTractor>().AnalysePath());
-
             yield return null;
         }
         if (!TractorInitialisation)
         {
-            _newtractor.GetComponent<MeshRenderer>().enabled = true;
+            foreach (var renderer in  _newtractor.GetComponentsInChildren<MeshRenderer>())
+                renderer.enabled = true;
+
             TractorInitialisation = true;
             _newtractor.GetComponent<CollisionTractor>().SetTextureRed();
         }
