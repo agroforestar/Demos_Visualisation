@@ -7704,7 +7704,7 @@ IL_05e0_1:
 			// foreach( MethodInfo method in type.GetMethods( BindingFlags.Static | BindingFlags.Public | BindingFlags.DeclaredOnly ) )
 			NullCheck(L_210);
 			MethodInfoU5BU5D_tDF3670604A0AECF814A0B0BA09B91FBF0D6A3265* L_211;
-			L_211 = VirtualFuncInvoker1< MethodInfoU5BU5D_tDF3670604A0AECF814A0B0BA09B91FBF0D6A3265*, int32_t >::Invoke(97 /* System.Reflection.MethodInfo[] System.Type::GetMethods(System.Reflection.BindingFlags) */, L_210, ((int32_t)26));
+			L_211 = VirtualFuncInvoker1< MethodInfoU5BU5D_tDF3670604A0AECF814A0B0BA09B91FBF0D6A3265*, int32_t >::Invoke(95 /* System.Reflection.MethodInfo[] System.Type::GetMethods(System.Reflection.BindingFlags) */, L_210, ((int32_t)26));
 			V_9 = L_211;
 			V_10 = 0;
 			goto IL_0654_1;
@@ -9759,7 +9759,7 @@ IL_0074:
 		Type_t* L_32 = V_6;
 		NullCheck(L_32);
 		bool L_33;
-		L_33 = VirtualFuncInvoker0< bool >::Invoke(68 /* System.Boolean System.Type::get_IsEnum() */, L_32);
+		L_33 = VirtualFuncInvoker0< bool >::Invoke(67 /* System.Boolean System.Type::get_IsEnum() */, L_32);
 		if (L_33)
 		{
 			goto IL_00b2;
@@ -11589,7 +11589,7 @@ IL_037d:
 		MethodInfo_t* L_162 = L_161->___method_0;
 		NullCheck(L_162);
 		Type_t* L_163;
-		L_163 = VirtualFuncInvoker0< Type_t* >::Invoke(40 /* System.Type System.Reflection.MethodInfo::get_ReturnType() */, L_162);
+		L_163 = VirtualFuncInvoker0< Type_t* >::Invoke(38 /* System.Type System.Reflection.MethodInfo::get_ReturnType() */, L_162);
 		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_164 = { reinterpret_cast<intptr_t> (Void_t4861ACF8F4594C3437BB48B6E56783494B843915_0_0_0_var) };
 		il2cpp_codegen_runtime_class_init_inline(Type_t_il2cpp_TypeInfo_var);
 		Type_t* L_165;
@@ -13246,7 +13246,7 @@ IL_004c:
 		Type_t* L_24 = ___0_type;
 		NullCheck(L_24);
 		bool L_25;
-		L_25 = VirtualFuncInvoker0< bool >::Invoke(68 /* System.Boolean System.Type::get_IsEnum() */, L_24);
+		L_25 = VirtualFuncInvoker0< bool >::Invoke(67 /* System.Boolean System.Type::get_IsEnum() */, L_24);
 		return L_25;
 	}
 
@@ -13447,7 +13447,7 @@ IL_0033:
 		Type_t* L_15 = ___1_argumentType;
 		NullCheck(L_15);
 		bool L_16;
-		L_16 = VirtualFuncInvoker0< bool >::Invoke(68 /* System.Boolean System.Type::get_IsEnum() */, L_15);
+		L_16 = VirtualFuncInvoker0< bool >::Invoke(67 /* System.Boolean System.Type::get_IsEnum() */, L_15);
 		if (!L_16)
 		{
 			goto IL_0044;

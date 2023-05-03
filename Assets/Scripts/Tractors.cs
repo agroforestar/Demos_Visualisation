@@ -159,6 +159,7 @@ public class Tractors : MonoBehaviour
         
         _newtractor = Instantiate(_tractorPrefab, _newParcelle.transform);
         _newtractor.transform.position = _anglesTractor[0].transform.position;
+        _newtractor.transform.rotation = _anglesTractor[0].transform.rotation;
         _newtractor.transform.localScale *= SizeMulti;
         
         _spawnTractor = true;
@@ -192,11 +193,14 @@ public class Tractors : MonoBehaviour
             }
 
             _newtractor.transform.position = Vector3.MoveTowards(_newtractor.transform.position, _anglesTractor[_tractorTargetAngles+1].transform.position, Time.deltaTime * speed);
+            _newtractor.transform.rotation = Quaternion.Lerp(_newtractor.transform.rotation, _anglesTractor[_tractorTargetAngles + 1].transform.rotation, Time.deltaTime * 5);
             
             float distance = Vector3.Distance(_newtractor.transform.position, _anglesTractor[_tractorTargetAngles+1].transform.position);
           
             if (distance < 0.001f)
                 _tractorTargetAngles++;
+            
+            StartCoroutine(_newtractor.GetComponent<CollisionTractor>().AnalysePath());
 
             yield return null;
         }

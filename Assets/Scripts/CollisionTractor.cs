@@ -9,67 +9,70 @@ using UnityEngine;
 public class CollisionTractor : MonoBehaviour
 {
 
-    private List<GameObject> trees = new List<GameObject>();
-    private List<RaycastHit> _positions = new List<RaycastHit>();
+    private List<GameObject> _trees = new List<GameObject>();
+    private readonly List<RaycastHit> _positions = new List<RaycastHit>();
 
-    private Texture2D texture;
-    // Start is called before the first frame update
+    private Texture2D _texture;
+
+    private MeshRenderer[] _treeRender;
+    
     void Start()
     {
         _positions.Clear();
-        trees = GameObject.FindGameObjectsWithTag("tree").ToList();
+        _trees = GameObject.FindGameObjectsWithTag("tree").ToList();
         var original =  GameObject.Find("Manager").GetComponent<Tractors>().texturePath;
-        texture = new Texture2D(original.width, original.height, original.format, false);
-        texture.SetPixels(original.GetPixels());
-        texture.Apply();
-        ARManager._newParcelle.GetComponent<Renderer>().material.mainTexture = texture;
-        StartCoroutine(AnalysePath());
-    }
-    
-    IEnumerator AnalysePath()
-    {
-        while(true)
+        _texture = new Texture2D(original.width, original.height, original.format, false);
+        _texture.SetPixels(original.GetPixels());
+        _texture.Apply();
+        ARManager._newParcelle.GetComponent<Renderer>().material.mainTexture = _texture;
+        _treeRender = new MeshRenderer[_trees.Count];
+        for (int i = 0; i < _trees.Count; i++)
         {
-            RaycastHit hit = new RaycastHit();
-            MeshRenderer renderer = null;
-
-            if (!Tractors.TractorInitialisation)
-            {
-                Ray ray = new Ray(transform.position, -transform.up);
-
-                if (Physics.Raycast(ray, out hit))
-                    renderer = hit.collider.GetComponent<MeshRenderer>();
-            }
-
-            Vector3 pointOne = gameObject.transform.position;
-
-            foreach (var tree in trees)
-            {
-                float distance = Vector3.Distance(tree.transform.position, pointOne);
-
-                tree.GetComponent<MeshRenderer>().material.color = Color.white;
-
-                if (distance < 0.05f * Tractors.SizeMulti)
-                {
-                    if (!Tractors.TractorInitialisation)
-                    {
-                        if (renderer != null)
-                            _positions.Add(hit);
-                    }
-                    else
-                        tree.GetComponent<MeshRenderer>().material.color = Color.red;
-                }
-            }
-            yield return new WaitForEndOfFrame();
+            _treeRender[i] = _trees[i].GetComponent<MeshRenderer>();
         }
     }
-    
+
+    public IEnumerator AnalysePath()
+    {
+        RaycastHit hit = new RaycastHit();
+        MeshRenderer renderer = null;
+
+        if (!Tractors.TractorInitialisation)
+        {
+            Ray ray = new Ray(transform.position, -transform.up);
+
+            if (Physics.Raycast(ray, out hit))
+                renderer = hit.collider.GetComponent<MeshRenderer>();
+        }
+
+        Vector3 pointOne = gameObject.transform.position;
+
+        for (int t = 0; t < _trees.Count; t++)
+        {
+            float distance = Vector3.Distance(_trees[t].transform.position, pointOne);
+
+            _treeRender[t].material.color = Color.white;
+
+            if (distance < 0.05f * Tractors.SizeMulti)
+            {
+                if (!Tractors.TractorInitialisation)
+                {
+                    if (renderer != null)
+                        _positions.Add(hit);
+                }
+                else
+                    _treeRender[t].GetComponent<MeshRenderer>().material.color = Color.red;
+            }
+        }
+        yield return null;
+    }
+
     public void SetTextureRed()
     {
         print(_positions.Count);
         
-        int width = 100;
-        int height = 100;
+        int width = 150;
+        int height = 150;
         
         foreach (var hit in _positions)
         {
@@ -84,8 +87,8 @@ public class CollisionTractor : MonoBehaviour
                 uv += uvs[triangles[triangleIndex * 3 + i]] * barycentric[i];
             }
 
-            int x = Mathf.FloorToInt(uv.x * texture.width);
-            int y = Mathf.FloorToInt(uv.y * texture.height);
+            int x = Mathf.FloorToInt(uv.x * _texture.width);
+            int y = Mathf.FloorToInt(uv.y * _texture.height);
         
             int xMin = Mathf.RoundToInt(x - width / 2.0f);
             int yMin = Mathf.RoundToInt(y - height / 2.0f);
@@ -94,11 +97,11 @@ public class CollisionTractor : MonoBehaviour
 
             for (int i = xMin; i < xMax; i++) {
                 for (int j = yMin; j < yMax; j++) {
-                    texture.SetPixel(i, j, Color.red);
+                    _texture.SetPixel(i, j, Color.red);
                 }
             }
         }
-        texture.Apply();
+        _texture.Apply();
     }
     
 }
