@@ -6,6 +6,7 @@ TagManager:
   tags:
   - tree
   - wheel
+  - Ptille
   layers:
   - Default
   - TransparentFX

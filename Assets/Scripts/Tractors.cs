@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -31,7 +32,7 @@ public class Tractors : MonoBehaviour
 
     public static float SizeMulti = 1;
     
-    public Texture2D texturePath;
+    [SerializeField] GameObject _pTille;
 
     // Start is called before the first frame update
     void Start()
@@ -62,9 +63,6 @@ public class Tractors : MonoBehaviour
         RaycastHit hit;
         switch (touch.phase)
         {
-            case TouchPhase.Began:
-                GetAnglesFromParcelle();
-                break;
             case TouchPhase.Moved:
                 if (Physics.Raycast(touchPos, out hit))
                 {
@@ -82,7 +80,7 @@ public class Tractors : MonoBehaviour
 
     }
 
-    void GetAnglesFromParcelle()
+    public void GetAnglesFromParcelle()
     {
         _anglesTractor.Clear();
         _newParcelle = ARManager._newParcelle;
@@ -95,6 +93,13 @@ public class Tractors : MonoBehaviour
                 _anglesTractor.Add(_newParcelle.transform.GetChild(i).gameObject);
         }
         _anglesTractor = _anglesTractor.OrderBy(x => int.Parse(x.name)).ToList();
+        
+        List<Vector3> listVectors = new List<Vector3>();
+        foreach (var angles in _anglesTractor)
+            listVectors.Add(angles.transform.position);
+        
+        var interpolatedPoints = Interpolation(50, listVectors);
+        SpawnPtille(interpolatedPoints);
     }
 
     GameObject MoveTractor(Vector3 actualPosition)
@@ -120,7 +125,9 @@ public class Tractors : MonoBehaviour
     public void AddTractors()
     {
         if(!_spawnTractor)
+        {
             _sizePanel.SetActive(true);
+        }
         else
         {
             EventSystem.current.currentSelectedGameObject.GetComponentInChildren<TextMeshProUGUI>().text = "Ajouter tracteur";
@@ -154,8 +161,6 @@ public class Tractors : MonoBehaviour
 
     public void SpawnTractor()
     {
-        GetAnglesFromParcelle();
-        
         var button = GameObject.Find("AddTractor");
 
         button.GetComponent<Image>().sprite = Resources.Load<Sprite>("IconHide");
@@ -177,6 +182,7 @@ public class Tractors : MonoBehaviour
 
         TractorInitialisation = false;
         _tractorMove = true;
+        
         StartCoroutine(TractorMovement());
     }
 
@@ -197,9 +203,7 @@ public class Tractors : MonoBehaviour
                 if (!TractorInitialisation)
                     _tractorMove = false;
             }
-
-            StartCoroutine(_newtractor.GetComponent<CollisionTractor>().AnalysePath());
-            
+        
             var position = _newtractor.transform.position;
             position = Vector3.MoveTowards(position, _anglesTractor[_tractorTargetAngles+1].transform.position, Time.deltaTime * speed);
             _newtractor.transform.position = position;
@@ -210,17 +214,62 @@ public class Tractors : MonoBehaviour
           
             if (distance < 0.001f)
                 _tractorTargetAngles++;
-            
             yield return null;
         }
         if (!TractorInitialisation)
         {
-            foreach (var renderer in  _newtractor.GetComponentsInChildren<MeshRenderer>())
+            foreach (var renderer in _newtractor.GetComponentsInChildren<MeshRenderer>())
                 renderer.enabled = true;
 
             TractorInitialisation = true;
-            _newtractor.GetComponent<CollisionTractor>().SetTextureRed();
         }
     }
-    
+
+    private void SpawnPtille(List<Vector3> pTillePos)
+    {
+        foreach (var position in pTillePos)
+        {
+            var p = Instantiate(_pTille, _newParcelle.transform);
+            p.transform.position = position;
+            
+        }
+    }
+
+    private List<Vector3> Interpolation(float distance, List<Vector3> vectors)
+    {
+        List<Vector3> points = new List<Vector3>();
+
+        float totalDistance = 0f;
+        float interval;
+        
+        if(vectors.Count < 2)
+        {
+            print("Error only two vectors");
+            return points;
+        }
+        
+        for (int i = 1; i < vectors.Count; i++)
+        {
+            totalDistance += Vector3.Distance(vectors[i - 1], vectors[i]);
+        }
+        interval = totalDistance / distance;
+        List<float> maxPoints =  new List<float>();
+        for (int i = 1; i < vectors.Count; i++)
+        {
+            float dist = Vector3.Distance(vectors[i - 1], vectors[i]);
+            maxPoints.Add(Mathf.FloorToInt(dist / interval));
+        }
+
+        for (int i = 0; i < vectors.Count-2; i++)
+        {
+            for (int j = 0; j < maxPoints[i]; j++)
+            {
+                float val = (maxPoints[i] - j) / maxPoints[i];
+                var vector = Vector3.Lerp(vectors[i], vectors[i + 1], val);
+                points.Add(vector);
+            }
+        }
+        return points;
+    }
+
 }

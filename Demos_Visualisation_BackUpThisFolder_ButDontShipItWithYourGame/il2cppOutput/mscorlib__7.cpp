@@ -23797,13 +23797,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Interlocked_Increment_m3C240C32E8D954
 	using namespace il2cpp::icalls;
 	return ((Interlocked_Increment_m3C240C32E8D9544EC050B74D4F28EEB58F1F9309_ftn)mscorlib::System::Threading::Interlocked::Increment) (___0_location);
 }
-// System.Int64 System.Threading.Interlocked::Increment(System.Int64&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t Interlocked_Increment_m12CD643CCD5FCDE95DBC0AB07D09AF696E26F9C0 (int64_t* ___0_location, const RuntimeMethod* method) 
-{
-	typedef int64_t (*Interlocked_Increment_m12CD643CCD5FCDE95DBC0AB07D09AF696E26F9C0_ftn) (int64_t*);
-	using namespace il2cpp::icalls;
-	return ((Interlocked_Increment_m12CD643CCD5FCDE95DBC0AB07D09AF696E26F9C0_ftn)mscorlib::System::Threading::Interlocked::Increment64) (___0_location);
-}
 // System.Int32 System.Threading.Interlocked::Exchange(System.Int32&,System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Interlocked_Exchange_m5810F59A9EF49D8003BA76D95398854254A091DF (int32_t* ___0_location1, int32_t ___1_value, const RuntimeMethod* method) 
 {

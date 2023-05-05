@@ -1519,7 +1519,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: NaN, y: 3e-45, z: 0, w: 2.7e-44}
+  m_BoundingSphereOverride: {x: 4.5904e-41, y: -7.544495e+22, z: 4.5904e-41, w: 9.403955e-38}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -2401,7 +2401,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tractorPrefab: {fileID: 7950460182566025864, guid: a659444b881572448a439b36990a3cfc,
     type: 3}
-  texturePath: {fileID: 2800000, guid: bad339cc41abb2b4399a9ce42d196bf7, type: 3}
+  texturePath: {fileID: 2800000, guid: 6c98fed97aaf0174886bc06d37121f35, type: 3}
+  _pTille: {fileID: 3925363227688155609, guid: 61e4fddf5efbbea43a9d8319cad6d85e, type: 3}
 --- !u!1 &1512598544
 GameObject:
   m_ObjectHideFlags: 0

@@ -105,6 +105,8 @@ public class ARManager : MonoBehaviour
         Destroy(adviceText);
         Destroy(GameObject.Find("CursorImage"));
         Destroy(GameObject.Find("InstantiateButton"));
+        
+        transform.GetComponent<Tractors>().GetAnglesFromParcelle();
     }
     static List<ARRaycastHit> s_Hits = new List<ARRaycastHit>();
 }

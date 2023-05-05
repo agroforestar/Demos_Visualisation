@@ -162,7 +162,7 @@
     },
     "m_PreviewData": {
         "serializedMesh": {
-            "m_SerializedMesh": "{\"mesh\":{\"fileID\":605408076271158607,\"guid\":\"c30482231e1e4f4448393c50a23dc337\",\"type\":3}}",
+            "m_SerializedMesh": "{\"mesh\":{\"fileID\":10200,\"guid\":\"0000000000000000e000000000000000\",\"type\":0}}",
             "m_Guid": ""
         },
         "preventRotation": false
@@ -224,7 +224,7 @@
     "overrideHLSLDeclaration": false,
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
-    "m_Value": 0.5,
+    "m_Value": 0.6000000238418579,
     "m_FloatType": 0,
     "m_RangeValues": {
         "x": 0.0,
@@ -515,7 +515,7 @@
     "m_Hidden": false,
     "m_ShaderOutputName": "Power",
     "m_StageCapability": 3,
-    "m_Value": 1.0,
+    "m_Value": 0.3799999952316284,
     "m_DefaultValue": 1.0,
     "m_Labels": []
 }
@@ -532,10 +532,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -306.0,
-            "y": 295.3333740234375,
+            "x": -338.0000305175781,
+            "y": 0.0000036231285776011647,
             "width": 106.66668701171875,
-            "height": 36.0
+            "height": 35.99998474121094
         }
     },
     "m_Slots": [
@@ -575,10 +575,10 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "r": 0.5754716992378235,
-        "g": 0.1121988296508789,
-        "b": 0.1121988296508789,
-        "a": 0.0
+        "r": 0.3271940052509308,
+        "g": 0.29500409960746767,
+        "b": 0.8301886916160584,
+        "a": 1.0
     },
     "isMainColor": false,
     "m_ColorMode": 0
