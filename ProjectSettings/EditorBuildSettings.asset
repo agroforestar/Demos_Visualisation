@@ -5,39 +5,48 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Menu.unity
     guid: 630995670ab508c409224c9851e735ea
   - enabled: 1
-    path: Assets/Scenes/Light.unity
-    guid: 4cf1553177872e6428d6ee7468706f46
-  - enabled: 0
-    path: Assets/Scenes/Tracteur.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/Begin.unity
+    guid: f0bcd9336e0a1ad42aa91077f49169cd
   - enabled: 1
-    path: Assets/Scenes/Boucliers.unity
+    path: Assets/Scenes/Visu1.unity
+    guid: 4cf1553177872e6428d6ee7468706f46
+  - enabled: 1
+    path: Assets/Scenes/Visu2.unity
     guid: daf2259a06cd0f244913634050ac3653
   - enabled: 1
-    path: Assets/Scenes/Tracteur_Light2.unity
-    guid: 362d35770ea23414e9b39d30c1199a91
-  - enabled: 1
-    path: Assets/Scenes/Light_Boucliers.unity
-    guid: a16b04c1caa961a458fa8b9800cb9527
-  - enabled: 1
-    path: Assets/Scenes/Tracteur_Boucliers2.unity
-    guid: 82464128327951544aa40ee4f2e17e41
-  - enabled: 1
-    path: Assets/Scenes/Tracteur2.unity
+    path: Assets/Scenes/Visu3.unity
     guid: 89195102c62b6054b907497e57ad95e4
   - enabled: 1
-    path: Assets/Scenes/Tracteur_Light_Boucliers2.unity
+    path: Assets/Scenes/Visu4.unity
+    guid: af03634526f429340b86126d2ce54eed
+  - enabled: 0
+    path: Assets/Scenes/Visu4old.unity
+    guid: 6835ca1c2c212b74d84c038ef275612e
+  - enabled: 1
+    path: Assets/Scenes/Visu5.unity
+    guid: 82464128327951544aa40ee4f2e17e41
+  - enabled: 1
+    path: Assets/Scenes/Visu6.unity
+    guid: a16b04c1caa961a458fa8b9800cb9527
+  - enabled: 1
+    path: Assets/Scenes/Visu7.unity
+    guid: 5e4d810cc37312c4884ca47194addfa9
+  - enabled: 0
+    path: Assets/Scenes/Visu7 nul a chier.unity
+    guid: 2e11a54cbd1e79646861add388ac6bf3
+  - enabled: 0
+    path: Assets/Scenes/Visu7old.unity
     guid: c7335e1da6c481e47a54d2358a9c79be
-  - enabled: 0
-    path: Assets/Scenes/Tracteur_Boucliers.unity
-    guid: 7891871896fbd2b4c91f6eefff1cce02
-  - enabled: 0
-    path: Assets/Scenes/Tracteur_Light_Boucliers.unity
-    guid: e3f44fd4ac5c5e942bf6531132ea8652
+  - enabled: 1
+    path: Assets/Scenes/Questions.unity
+    guid: 184909db704be77468c7cea4c094e020
+  - enabled: 1
+    path: Assets/Scenes/End.unity
+    guid: cf77b17198aa4e94bbc30003dd1bf62f
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 744b813df90924c169af73489b8325de,
       type: 2}

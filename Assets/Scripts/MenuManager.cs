@@ -23,12 +23,20 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene(_sceneName);
     }
 
-
      public void Quit()
     {
         Application.Quit();
     }
 
+
+
+    private static int nextSceneIndex = 1; // Index de la prochaine scène à charger après "Questions"
+
+    public void LoadNextScene()
+    {
+        SceneManager.LoadScene("Visu" + nextSceneIndex);
+        nextSceneIndex++;
+    }
 
 
 

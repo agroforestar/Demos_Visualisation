@@ -25,13 +25,16 @@ public class ARManagerLight : MonoBehaviour
     [SerializeField] private GameObject cursor;
     [SerializeField] private TextMeshProUGUI adviceText;
 
-    public static GameObject _newParcelle;
+    public GameObject _newParcelle;
     
     private GameObject _panel;
     private GameObject _panelLegend;
     private GameObject _instantiateButton;
     
     private bool _validPos;
+
+    List<ARRaycastHit> s_Hits = new List<ARRaycastHit>();
+
     
     // Start is called before the first frame update
     void Start()
@@ -46,11 +49,12 @@ public class ARManagerLight : MonoBehaviour
         _panel = GameObject.Find("Panel");
         _panelLegend = GameObject.Find("PanelLegend");
         _panelLegend.SetActive(false);
+        _panel.SetActive(false);
 
         _instantiateButton = GameObject.Find("InstantiateButton");
 
         print(USER.name);
-
+        s_Hits.Clear();
         StartCoroutine(InstantiateVisualisation());
 
     }
@@ -113,5 +117,4 @@ public class ARManagerLight : MonoBehaviour
         
         transform.GetComponent<Tractors>().GetAnglesFromParcelle();
     }
-    static List<ARRaycastHit> s_Hits = new List<ARRaycastHit>();
 }
