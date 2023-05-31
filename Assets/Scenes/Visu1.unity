@@ -1760,7 +1760,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Menu
+          m_StringArgument: Begin
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &942858294
@@ -1905,8 +1905,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Visualisation 1 : Quantit\xE9 de lumi\xE8re au sol"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1936,7 +1936,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 3
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -2028,6 +2028,7 @@ MonoBehaviour:
     type: 3}
   cursor: {fileID: 223974226}
   adviceText: {fileID: 630913747}
+  _newParcelle: {fileID: 0}
 --- !u!1 &1587454664
 GameObject:
   m_ObjectHideFlags: 0
@@ -2516,7 +2517,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: f6251b6e6ff69e94eb5aa3f6ce1a948c, type: 3}
+  m_Texture: {fileID: 2800000, guid: 9700aaa6690d5064792517bec7237e4f, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0

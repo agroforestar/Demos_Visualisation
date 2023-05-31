@@ -30,13 +30,22 @@ public class MenuManager : MonoBehaviour
 
 
 
-    private static int nextSceneIndex = 1; // Index de la prochaine scène à charger après "Questions"
+    private static int nextSceneIndex = 0; // Index de la prochaine scène à charger après "Questions"
 
     public void LoadNextScene()
     {
-        SceneManager.LoadScene("Visu" + nextSceneIndex);
         nextSceneIndex++;
+        SceneManager.LoadScene("Visu" + nextSceneIndex);
+        
     }
+
+    public void LoadPreviousScene()
+    {
+        nextSceneIndex--;
+        SceneManager.LoadScene("Visu" + nextSceneIndex);
+        
+    }
+
 
 
 

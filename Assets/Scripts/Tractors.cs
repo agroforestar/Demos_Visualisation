@@ -10,7 +10,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
-
+using System.Globalization;
 public class Tractors : MonoBehaviour
 {
     private List<GameObject> _anglesTractor = new List<GameObject>();
@@ -189,12 +189,12 @@ public class Tractors : MonoBehaviour
         button.GetComponent<Image>().sprite = Resources.Load<Sprite>("close-red");
         button.GetComponentInChildren<TextMeshProUGUI>().text = "Supprimer tracteur";
         
-        SizeMulti = int.Parse(EventSystem.current.currentSelectedGameObject.name);
+        SizeMulti = float.Parse(EventSystem.current.currentSelectedGameObject.name, CultureInfo.InvariantCulture);
         
         _newtractor = Instantiate(_tractorPrefab, _newParcelle.transform);
         _newtractor.transform.position = _anglesTractor[0].transform.position;
         _newtractor.transform.rotation = _anglesTractor[0].transform.rotation;
-        _newtractor.transform.localScale *= SizeMulti;
+        _newtractor.transform.GetChild(1).transform.localScale *= SizeMulti;
         
         _sizePanel.SetActive(false);
 

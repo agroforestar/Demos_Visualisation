@@ -46,10 +46,16 @@ public class CollisionTractor : MonoBehaviour
                 
             GameObject.Find("Manager").GetComponent<Tractors>().StartTractorInit();
         });
+
+        var ptille = GameObject.FindGameObjectsWithTag("Ptille");
+        foreach(var x  in ptille){
+            x.gameObject.GetComponent<MeshRenderer>().material.color = Color.grey;
+        }
     }
 
     private void Update()
     {
+        /*
         _hit = false;
         Vector3 pointOne = gameObject.transform.position;
         for (int t = 0; t < _trees.Count; t++)
@@ -73,23 +79,50 @@ public class CollisionTractor : MonoBehaviour
 
             }
         }
-
+*/
          
     }
 
-
+    List<GameObject> trigger = new List<GameObject>();
     private void OnTriggerEnter(Collider other)
     {
-        if (Tractors.TractorInitialisation)
-            return;
-        
-        if (other.gameObject.CompareTag("Ptille"))
-        {
-            if(_hit)
+       
+        if(other.gameObject.CompareTag("tree")){
+
+            if (Tractors.TractorInitialisation){
                 other.gameObject.GetComponent<MeshRenderer>().material.color = Color.red;
-            else
-                other.gameObject.GetComponent<MeshRenderer>().material.color = Color.grey;
+            }else{
+            ptill();
+            }
+                
         }
+
+         if (Tractors.TractorInitialisation)
+            return;
+
+         if (other.gameObject.CompareTag("Ptille"))
+        {
+            trigger.Add(other.gameObject);
+        }
+    }
+
+    void ptill(){
+        print("hellllllll");
+        foreach(var x in trigger){
+            print(x.name);
+            if(x.gameObject.CompareTag("Ptille"))
+                    x.gameObject.GetComponent<MeshRenderer>().material.color = Color.red;
+        }
+    }
+
+    private void OnTriggerExit(Collider other){
+        if(other.gameObject.CompareTag("tree")){
+            other.gameObject.GetComponent<MeshRenderer>().material.color = Color.white;
+        }
+        if(other.gameObject.CompareTag("Ptille")){
+            trigger.Remove(other.gameObject);
+        }
+
     }
 
 }

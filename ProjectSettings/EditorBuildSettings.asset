@@ -23,9 +23,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Visu4.unity
     guid: af03634526f429340b86126d2ce54eed
-  - enabled: 0
-    path: Assets/Scenes/Visu4old.unity
-    guid: 6835ca1c2c212b74d84c038ef275612e
   - enabled: 1
     path: Assets/Scenes/Visu5.unity
     guid: 82464128327951544aa40ee4f2e17e41
@@ -35,12 +32,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Visu7.unity
     guid: 5e4d810cc37312c4884ca47194addfa9
-  - enabled: 0
-    path: Assets/Scenes/Visu7 nul a chier.unity
-    guid: 2e11a54cbd1e79646861add388ac6bf3
-  - enabled: 0
-    path: Assets/Scenes/Visu7old.unity
-    guid: c7335e1da6c481e47a54d2358a9c79be
   - enabled: 1
     path: Assets/Scenes/Questions.unity
     guid: 184909db704be77468c7cea4c094e020
