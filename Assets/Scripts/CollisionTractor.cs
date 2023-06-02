@@ -14,7 +14,7 @@ public class CollisionTractor : MonoBehaviour
     private List<GameObject> _trees = new List<GameObject>();
 
     private MeshRenderer[] _treeRender;
-    private float _coefCroissance = 0.6f;
+    private float _coefCroissance = 0.3f;
 
     
     private bool _hit;
@@ -28,8 +28,8 @@ public class CollisionTractor : MonoBehaviour
         
         var slider = GameObject.Find("SliderCroissance").GetComponent<Slider>();
         
-        _coefCroissance = (int)slider.value == 0 ? 0.6f : (int)slider.value == 1 ? 0.8f : 1.2f;
-        var scale = slider.value == 0 ? 0.4f : _coefCroissance;
+        _coefCroissance = (int)slider.value == 0 ? 0.3f : (int)slider.value == 1 ? 0.4f : 0.5f;
+        var scale = slider.value == 0 ? 0.3f : _coefCroissance;
         
         foreach (var tree in _trees)
         {
@@ -37,8 +37,8 @@ public class CollisionTractor : MonoBehaviour
         }
         slider.onValueChanged.AddListener((value) =>
         {
-            _coefCroissance = (int)value == 0 ? 0.6f : (int)value == 1 ? 0.8f : 1.2f;
-            var taille = value == 0 ? 0.4f : _coefCroissance;
+            _coefCroissance = (int)value == 0 ? 0.3f : (int)value == 1 ? 0.4f : 0.5f;
+            var taille = value == 0 ? 0.3f : _coefCroissance;
             foreach (var tree in _trees)
             {
                 tree.transform.localScale = new Vector3(taille, taille, taille);
