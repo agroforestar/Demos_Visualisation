@@ -11,6 +11,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using System.Globalization;
+
 public class Tractors : MonoBehaviour
 {
     private List<GameObject> _anglesTractor = new List<GameObject>();

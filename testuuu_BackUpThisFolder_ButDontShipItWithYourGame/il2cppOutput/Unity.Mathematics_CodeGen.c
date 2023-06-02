@@ -1221,21 +1221,21 @@ static const int32_t s_InvokerIndices[247] =
 };
 static TypeDefinitionIndex s_staticConstructorsToRunAtStartup[16] = 
 {
-	5683,
 	5685,
 	5687,
 	5689,
-	5690,
+	5691,
 	5692,
-	5693,
 	5694,
+	5695,
 	5696,
 	5698,
 	5700,
-	5701,
+	5702,
 	5703,
 	5705,
 	5707,
+	5709,
 	0,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Unity_Mathematics_CodeGenModule;

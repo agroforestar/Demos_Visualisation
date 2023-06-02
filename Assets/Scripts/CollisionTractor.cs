@@ -107,7 +107,6 @@ public class CollisionTractor : MonoBehaviour
     }
 
     void ptill(){
-        print("hellllllll");
         foreach(var x in trigger){
             print(x.name);
             if(x.gameObject.CompareTag("Ptille"))

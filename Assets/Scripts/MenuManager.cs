@@ -34,6 +34,8 @@ public class MenuManager : MonoBehaviour
 
     public void LoadNextScene()
     {
+        Tractors.TractorInitialisation = false;
+        Tractors2.TractorInitialisation = false;
         nextSceneIndex++;
         SceneManager.LoadScene("Visu" + nextSceneIndex);
         
@@ -41,6 +43,8 @@ public class MenuManager : MonoBehaviour
 
     public void LoadPreviousScene()
     {
+        Tractors.TractorInitialisation = false;
+        Tractors2.TractorInitialisation = false;
         nextSceneIndex--;
         SceneManager.LoadScene("Visu" + nextSceneIndex);
         
