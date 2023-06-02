@@ -3583,6 +3583,7 @@ GameObject:
   - component: {fileID: 5257865912774094831}
   - component: {fileID: 8082539796466395005}
   - component: {fileID: 3417413594883251063}
+  - component: {fileID: 585991487559231506}
   m_Layer: 0
   m_Name: planter_lod0
   m_TagString: Untagged
@@ -3807,6 +3808,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 91fa437b74d7499418d7e710d4d954db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &585991487559231506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3504012639190122610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8765edd43070473478762d8822c7a870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &3570489886075802386
