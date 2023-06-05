@@ -37,12 +37,18 @@ public class Tractors : MonoBehaviour
 
     private GameObject _sliderCroissance;
 
+    private GameObject _play;
+
     // Start is called before the first frame update
     void Start()
     {
         _sizePanel = GameObject.Find("SizePanel");
         _panel = GameObject.Find("Panel");
         _sliderCroissance = GameObject.Find("SliderCroissance");
+
+        _play = GameObject.Find("Play");
+
+        _play.SetActive(false);
         
         _sliderCroissance.SetActive(false);
         _sizePanel.SetActive(false);
@@ -142,49 +148,40 @@ public class Tractors : MonoBehaviour
             _spawnTractor = false;
             
             _sliderCroissance.SetActive(false);
+            _play.SetActive(false);
             
             Destroy(_newtractor);
         }
     }
 
     public void PlayAndStop()
+{
+    if (!_spawnTractor)
+        return;
+
+    if (!TractorInitialisation)
+        return;
+
+    _tractorMove = !_tractorMove;
+
+    if (_tractorMove)
     {
-        if (!_spawnTractor)
-            return;
-
-        if (!TractorInitialisation)
-            return;
-        
-        _tractorMove = !_tractorMove;
-        
-        
-        
-
-
-        ///EventSystem.current.currentSelectedGameObject.GetComponentInChildren<TextMeshProUGUI>().text = _tractorMove ? "Stop" : "Play";
-        if(_tractorMove)
-            EventSystem.current.currentSelectedGameObject.GetComponent<Image>().sprite = Resources.Load<Sprite>("RIGHT-GREEN");
-            
-
-        if(!_tractorMove)
-            EventSystem.current.currentSelectedGameObject.GetComponent<Image>().sprite = Resources.Load<Sprite>("pause-red");
-
-
-
-
-
-
-        if (_tractorMove)
-            _newtractor.GetComponent<Animator>().enabled = true;
-        else
-            _newtractor.GetComponent<Animator>().enabled = false;
-        
-        StartCoroutine(TractorMovement());
+        EventSystem.current.currentSelectedGameObject.GetComponent<Image>().sprite = Resources.Load<Sprite>("RIGHT-GREEN");
+        _newtractor.GetComponent<Animator>().enabled = true;
     }
+    else
+    {
+        EventSystem.current.currentSelectedGameObject.GetComponent<Image>().sprite = Resources.Load<Sprite>("pause-red");
+        _newtractor.GetComponent<Animator>().enabled = false;
+    }
+
+    StartCoroutine(TractorMovement());
+}
 
     public void SpawnTractor()
     {
         _sliderCroissance.SetActive(true);
+        _play.SetActive(true);
         var button = GameObject.Find("AddTractor");
 
         button.GetComponent<Image>().sprite = Resources.Load<Sprite>("close-red");

@@ -37,15 +37,16 @@ public class CollisionTractor : MonoBehaviour
         }
         slider.onValueChanged.AddListener((value) =>
         {
-            _coefCroissance = (int)value == 0 ? 0.3f : (int)value == 1 ? 0.4f : 0.5f;
+             _coefCroissance = (int)value == 0 ? 0.3f : (int)value == 1 ? 0.4f : 0.5f;
             var taille = value == 0 ? 0.3f : _coefCroissance;
+            StopAllCoroutines();
             foreach (var tree in _trees)
             {
-                tree.transform.localScale = new Vector3(taille, taille, taille);
+                StartCoroutine(ChangeTaille(tree, taille));
             }
                 
-            GameObject.Find("Manager").GetComponent<Tractors>().StartTractorInit();
         });
+
 
         var ptille = GameObject.FindGameObjectsWithTag("Ptille");
         foreach(var x  in ptille){
@@ -120,6 +121,21 @@ public class CollisionTractor : MonoBehaviour
         }
         if(other.gameObject.CompareTag("Ptille")){
             trigger.Remove(other.gameObject);
+        }
+
+    }
+
+
+    IEnumerator ChangeTaille(GameObject go, float scale){
+        float desriedTime = 2f;
+        float actualTime = 0f;
+
+        while(desriedTime > actualTime){
+
+            go.transform.localScale = Vector3.Lerp(go.transform.localScale, new Vector3(scale, scale, scale), actualTime/desriedTime);
+            actualTime += Time.deltaTime;
+
+            yield return null;
         }
 
     }

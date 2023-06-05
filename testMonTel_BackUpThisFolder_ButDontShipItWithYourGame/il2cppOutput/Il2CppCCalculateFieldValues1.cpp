@@ -28745,14 +28745,18 @@ struct CollisionTractor2_t6EB6BA9C03E9A334A6DBBBAE3E18335CD693F54E  : public Mon
 {
 	// System.Collections.Generic.List`1<UnityEngine.GameObject> CollisionTractor2::_trees
 	List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* ____trees_4;
+	// System.Collections.Generic.List`1<UnityEngine.GameObject> CollisionTractor2::_tractor
+	List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* ____tractor_5;
 	// UnityEngine.MeshRenderer[] CollisionTractor2::_treeRender
-	MeshRendererU5BU5D_tDF429EF168050A5CE085D0B51909A6AE2067E446* ____treeRender_5;
+	MeshRendererU5BU5D_tDF429EF168050A5CE085D0B51909A6AE2067E446* ____treeRender_6;
+	// UnityEngine.MeshRenderer[] CollisionTractor2::_tractorsRender
+	MeshRendererU5BU5D_tDF429EF168050A5CE085D0B51909A6AE2067E446* ____tractorsRender_7;
 	// System.Single CollisionTractor2::_coefCroissance
-	float ____coefCroissance_6;
+	float ____coefCroissance_8;
 	// System.Boolean CollisionTractor2::_hit
-	bool ____hit_7;
+	bool ____hit_9;
 	// System.Collections.Generic.List`1<UnityEngine.GameObject> CollisionTractor2::trigger
-	List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* ___trigger_8;
+	List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* ___trigger_10;
 };
 
 // CreateObj
@@ -48203,9 +48207,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5256[13] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5257[5] = 
 {
 	static_cast<int32_t>(offsetof(CollisionTractor_t53C167EEF4880DB985DCAA8891B1910BA8798B87, ____trees_4)),static_cast<int32_t>(offsetof(CollisionTractor_t53C167EEF4880DB985DCAA8891B1910BA8798B87, ____treeRender_5)),static_cast<int32_t>(offsetof(CollisionTractor_t53C167EEF4880DB985DCAA8891B1910BA8798B87, ____coefCroissance_6)),static_cast<int32_t>(offsetof(CollisionTractor_t53C167EEF4880DB985DCAA8891B1910BA8798B87, ____hit_7)),static_cast<int32_t>(offsetof(CollisionTractor_t53C167EEF4880DB985DCAA8891B1910BA8798B87, ___trigger_8)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5258[5] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5258[7] = 
 {
-	static_cast<int32_t>(offsetof(CollisionTractor2_t6EB6BA9C03E9A334A6DBBBAE3E18335CD693F54E, ____trees_4)),static_cast<int32_t>(offsetof(CollisionTractor2_t6EB6BA9C03E9A334A6DBBBAE3E18335CD693F54E, ____treeRender_5)),static_cast<int32_t>(offsetof(CollisionTractor2_t6EB6BA9C03E9A334A6DBBBAE3E18335CD693F54E, ____coefCroissance_6)),static_cast<int32_t>(offsetof(CollisionTractor2_t6EB6BA9C03E9A334A6DBBBAE3E18335CD693F54E, ____hit_7)),static_cast<int32_t>(offsetof(CollisionTractor2_t6EB6BA9C03E9A334A6DBBBAE3E18335CD693F54E, ___trigger_8)),};
+	static_cast<int32_t>(offsetof(CollisionTractor2_t6EB6BA9C03E9A334A6DBBBAE3E18335CD693F54E, ____trees_4)),static_cast<int32_t>(offsetof(CollisionTractor2_t6EB6BA9C03E9A334A6DBBBAE3E18335CD693F54E, ____tractor_5)),static_cast<int32_t>(offsetof(CollisionTractor2_t6EB6BA9C03E9A334A6DBBBAE3E18335CD693F54E, ____treeRender_6)),static_cast<int32_t>(offsetof(CollisionTractor2_t6EB6BA9C03E9A334A6DBBBAE3E18335CD693F54E, ____tractorsRender_7)),static_cast<int32_t>(offsetof(CollisionTractor2_t6EB6BA9C03E9A334A6DBBBAE3E18335CD693F54E, ____coefCroissance_8)),static_cast<int32_t>(offsetof(CollisionTractor2_t6EB6BA9C03E9A334A6DBBBAE3E18335CD693F54E, ____hit_9)),static_cast<int32_t>(offsetof(CollisionTractor2_t6EB6BA9C03E9A334A6DBBBAE3E18335CD693F54E, ___trigger_10)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable5259[3] = 
 {
 	static_cast<int32_t>(offsetof(FollowPath_tFCC93053530936270DB4FF4D88AD43F485FA146F, ___pathCreator_4)),static_cast<int32_t>(offsetof(FollowPath_tFCC93053530936270DB4FF4D88AD43F485FA146F, ___speed_5)),static_cast<int32_t>(offsetof(FollowPath_tFCC93053530936270DB4FF4D88AD43F485FA146F, ___distanceTravelled_6)),};

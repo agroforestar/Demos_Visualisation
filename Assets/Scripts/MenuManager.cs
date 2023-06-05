@@ -30,8 +30,7 @@ public class MenuManager : MonoBehaviour
 
 
 
-    private static int nextSceneIndex = 0; // Index de la prochaine scène à charger après "Questions"
-
+    public static int nextSceneIndex = 0; // Index de la prochaine scène à charger après "Questions"
     public void LoadNextScene()
     {
         Tractors.TractorInitialisation = false;

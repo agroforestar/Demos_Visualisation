@@ -140,8 +140,8 @@ extern void CollisionTractor2_ptill_m5ED39995D8B2B9BC182C6F89681253F2015B58EE (v
 extern void CollisionTractor2_OnTriggerExit_m99372D4EA2F1AD9056B981BD5A37F8EFC3861E7E (void);
 // 0x00000040 System.Void CollisionTractor2::.ctor()
 extern void CollisionTractor2__ctor_m62553F87F0FE4F01CE00CDC45B3A251063A579AB (void);
-// 0x00000041 System.Void CollisionTractor2::<Start>b__4_0(System.Single)
-extern void CollisionTractor2_U3CStartU3Eb__4_0_m85E5FD7E04D0219C066B230755C34A4768238904 (void);
+// 0x00000041 System.Void CollisionTractor2::<Start>b__6_0(System.Single)
+extern void CollisionTractor2_U3CStartU3Eb__6_0_m041FD940E5C5B38A4C9BDA945F35219ECB8BBD3B (void);
 // 0x00000042 System.Void FollowPath::Update()
 extern void FollowPath_Update_m2DF7630BCDCADFB1043BECD6C29E3C7FBCA8C7E5 (void);
 // 0x00000043 System.Void FollowPath::.ctor()
@@ -901,7 +901,7 @@ static Il2CppMethodPointer s_methodPointers[412] =
 	CollisionTractor2_ptill_m5ED39995D8B2B9BC182C6F89681253F2015B58EE,
 	CollisionTractor2_OnTriggerExit_m99372D4EA2F1AD9056B981BD5A37F8EFC3861E7E,
 	CollisionTractor2__ctor_m62553F87F0FE4F01CE00CDC45B3A251063A579AB,
-	CollisionTractor2_U3CStartU3Eb__4_0_m85E5FD7E04D0219C066B230755C34A4768238904,
+	CollisionTractor2_U3CStartU3Eb__6_0_m041FD940E5C5B38A4C9BDA945F35219ECB8BBD3B,
 	FollowPath_Update_m2DF7630BCDCADFB1043BECD6C29E3C7FBCA8C7E5,
 	FollowPath__ctor_m687D6BCDB3DAB246D0854CB3E60F2538ACA21DB0,
 	FollowPathTracteur_Update_m815692499D53E8FC95DC9ECF241C15AFC58ABF53,
