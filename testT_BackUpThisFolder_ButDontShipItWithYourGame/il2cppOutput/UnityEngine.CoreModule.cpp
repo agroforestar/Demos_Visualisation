@@ -26326,15 +26326,6 @@ IL_0014:
 		return L_3;
 	}
 }
-// System.Void UnityEngine.Material::Lerp(UnityEngine.Material,UnityEngine.Material,System.Single)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Material_Lerp_m0956EDF6A64E7C27B4600F1F2FED81A19B0CAC06 (Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* __this, Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___0_start, Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* ___1_end, float ___2_t, const RuntimeMethod* method) 
-{
-	typedef void (*Material_Lerp_m0956EDF6A64E7C27B4600F1F2FED81A19B0CAC06_ftn) (Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3*, Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3*, Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3*, float);
-	static Material_Lerp_m0956EDF6A64E7C27B4600F1F2FED81A19B0CAC06_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (Material_Lerp_m0956EDF6A64E7C27B4600F1F2FED81A19B0CAC06_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Material::Lerp(UnityEngine.Material,UnityEngine.Material,System.Single)");
-	_il2cpp_icall_func(__this, ___0_start, ___1_end, ___2_t);
-}
 // System.Boolean UnityEngine.Material::SetPass(System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Material_SetPass_mBB03542DFF4FAEADFCED332009F9D61B6DED75FE (Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* __this, int32_t ___0_pass, const RuntimeMethod* method) 
 {

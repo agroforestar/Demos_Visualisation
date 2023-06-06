@@ -56,7 +56,7 @@ public class SliderManagerLight : MonoBehaviour
             {
                 StartCoroutine(ChangeTaille(tree, taille));
             }
-          
+                
         });
 
     }
@@ -77,17 +77,18 @@ public class SliderManagerLight : MonoBehaviour
 
     private void Update()
     {
-         if (_coefCroissance == 0.3f){
-                _parcelleRender.material = materialLight1;
+        
+        if (_coefCroissance == 0.3f){
+            _parcelleRender.material = materialLight1;
             }
-            if (_coefCroissance == 0.4f){
-                    _parcelleRender.material = materialLight2;
-                }
-            if (_coefCroissance == 0.5f){
-                   _parcelleRender.material = materialLight3;
-                }
+        if (_coefCroissance == 0.4f){
+            _parcelleRender.material = materialLight2;
+            }
+        if (_coefCroissance == 0.5f){
+            _parcelleRender.material = materialLight3;
+            }
        
     }
-    
+  
 
 }

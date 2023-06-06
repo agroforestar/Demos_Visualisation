@@ -697,6 +697,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d0e1bcc5b14ff141a3e4976a232b741, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boucliers1: {fileID: 3626355088437297467, guid: 0634f319c09880f4d93b09d136142ed6,
+    type: 3}
+  boucliers2: {fileID: 3626355088437297467, guid: bdcaf5b7325a02d4fba13baf56e74229,
+    type: 3}
+  boucliers3: {fileID: 3626355088437297467, guid: 04e96f085781854499c1cf9d2f543b74,
+    type: 3}
 --- !u!1 &3708377427959478275
 GameObject:
   m_ObjectHideFlags: 0

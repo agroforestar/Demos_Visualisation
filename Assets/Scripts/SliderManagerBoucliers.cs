@@ -23,6 +23,11 @@ public class SliderManagerBoucliers : MonoBehaviour
     //public Material materialLight1;
     //public Material materialLight2;
     //public Material materialLight3;
+
+    public GameObject boucliers1;
+    public GameObject boucliers2;
+    public GameObject boucliers3;
+  
     
     //private GameObject _parcelle;
     //private Renderer _parcelleRender;
@@ -51,6 +56,24 @@ public class SliderManagerBoucliers : MonoBehaviour
         {
             _coefCroissance = (int)value == 0 ? 0.3f : (int)value == 1 ? 0.4f : 0.5f;
             var taille = value == 0 ? 0.3f : _coefCroissance;
+            
+            if (_coefCroissance == 0.3f){
+                SpawnPrefab(boucliers1);
+                Destroy(boucliers2);
+                Destroy(boucliers3);
+            }
+            if (_coefCroissance == 0.4f){
+                SpawnPrefab(boucliers2);
+                Destroy(boucliers1);
+                Destroy(boucliers3);
+            }
+            if (_coefCroissance == 0.5f){
+                SpawnPrefab(boucliers3);
+                Destroy(boucliers1);
+                Destroy(boucliers2);
+            }
+
+
             StopAllCoroutines();
             foreach (var tree in _trees)
             {
@@ -77,18 +100,14 @@ public class SliderManagerBoucliers : MonoBehaviour
 
     private void Update()
     {
-        /*
-        if (_coefCroissance == 0.3f){
-            _parcelleRender.material = materialLight1;
-            }
-        if (_coefCroissance == 0.4f){
-            _parcelleRender.material = materialLight2;
-            }
-        if (_coefCroissance == 0.5f){
-            _parcelleRender.material = materialLight3;
-            }
-       */
+        
+
+       
     }
   
+  private void SpawnPrefab(GameObject prefab)
+    {
+        Instantiate(prefab, transform.position, Quaternion.identity);
+    }
 
 }
