@@ -23,6 +23,14 @@ public class CollisionTractor2 : MonoBehaviour
     
     private bool _hit;
 
+    public Material materialLight1;
+    public Material materialLight2;
+    public Material materialLight3;
+    
+    private GameObject _parcelle;
+    private Renderer _parcelleRender;
+
+
     void Start()
     {
         //_tractor = GameObject.FindGameObjectsWithTag("tractor").ToList();
@@ -30,6 +38,9 @@ public class CollisionTractor2 : MonoBehaviour
         //for (int i = 0; i < _tractor.Count; i++)
              //_tractorsRender[i] = _tractorsRender[i].GetComponent<MeshRenderer>();
 
+
+        _parcelle = GameObject.FindGameObjectWithTag("parcelle");
+        _parcelleRender = _parcelle.GetComponent<Renderer>();
 
         _trees = GameObject.FindGameObjectsWithTag("tree").ToList();
         _treeRender = new MeshRenderer[_trees.Count];
@@ -64,32 +75,16 @@ public class CollisionTractor2 : MonoBehaviour
 
     private void Update()
     {
-        /*
-        _hit = false;
-        Vector3 pointOne = gameObject.transform.position;
-        for (int t = 0; t < _trees.Count; t++)
-        {
-            float distance = Vector3.Distance(_trees[t].transform.position, pointOne);
-
-            _treeRender[t].material.color = Color.white;
-
-            if (distance < 0.03f * Tractors.SizeMulti * _coefCroissance)
-            {
-                if (!Tractors.TractorInitialisation)
-                {
-                    _hit = true;
-                    break;
-                }
-                
-                _treeRender[t].GetComponent<MeshRenderer>().material.color = Color.red;
-
-                
-                return;
-
+        if (_coefCroissance == 0.3f){
+            _parcelleRender.material = materialLight1;
             }
-        }
-*/
-         
+        if (_coefCroissance == 0.4f){
+            _parcelleRender.material = materialLight2;
+            }
+        if (_coefCroissance == 0.5f){
+            _parcelleRender.material = materialLight3;
+            }
+     
     }
 
     List<GameObject> trigger = new List<GameObject>();

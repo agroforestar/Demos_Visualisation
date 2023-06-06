@@ -3558,7 +3558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da8650510ca1c4e43834f6fd628a1b6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tractorPrefab: {fileID: 4351722468581774461, guid: 58bea1468a837504092a6aa08cc07d82,
+  _tractorPrefab: {fileID: 4351722468581774461, guid: 0cc312cbdf5ed354f8920d4bad42f99b,
     type: 3}
   _pTille: {fileID: 3925363227688155609, guid: 61e4fddf5efbbea43a9d8319cad6d85e, type: 3}
 --- !u!1 &1512598544

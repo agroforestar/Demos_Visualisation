@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 1528663814663416015}
   m_Layer: 0
   m_Name: ParcelleLight2Blanc
-  m_TagString: Untagged
+  m_TagString: parcelle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -339,7 +339,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 412602a0163e2af43bc35c09fada0d06, type: 2}
+  - {fileID: 2100000, guid: 24921ffd72b5d924fb85cbdc98423f4d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -386,6 +386,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 931e05d3f01994849b921f208b498cd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  materialLight1: {fileID: 2100000, guid: 257a0d3d41ad4fe4fa8993d5d10b184a, type: 2}
+  materialLight2: {fileID: 2100000, guid: 24921ffd72b5d924fb85cbdc98423f4d, type: 2}
+  materialLight3: {fileID: 2100000, guid: 928381965472bc24e8219818883612f7, type: 2}
 --- !u!1 &3708377427959478275
 GameObject:
   m_ObjectHideFlags: 0

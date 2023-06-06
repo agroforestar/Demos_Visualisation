@@ -526,7 +526,7 @@ GameObject:
   - component: {fileID: 2482652444075851043}
   m_Layer: 0
   m_Name: ParcelleTracteurLightBoucliers2Blanc
-  m_TagString: Untagged
+  m_TagString: parcelle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -649,7 +649,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 412602a0163e2af43bc35c09fada0d06, type: 2}
+  - {fileID: 2100000, guid: 24921ffd72b5d924fb85cbdc98423f4d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

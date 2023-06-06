@@ -12,7 +12,7 @@ using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using System.Globalization;
 
-public class SliderManager : MonoBehaviour
+public class SliderManagerLight : MonoBehaviour
 {
 
     private List<GameObject> _trees = new List<GameObject>();
@@ -20,9 +20,18 @@ public class SliderManager : MonoBehaviour
     private MeshRenderer[] _treeRender;
     private float _coefCroissance = 0.3f;
 
+    public Material materialLight1;
+    public Material materialLight2;
+    public Material materialLight3;
+    
+    private GameObject _parcelle;
+    private Renderer _parcelleRender;
+
     void Start()
     {
- 
+        _parcelle = GameObject.FindGameObjectWithTag("parcelle");
+        _parcelleRender = _parcelle.GetComponent<Renderer>();
+       
         _trees = GameObject.FindGameObjectsWithTag("tree").ToList();
         _treeRender = new MeshRenderer[_trees.Count];
         for (int i = 0; i < _trees.Count; i++)
@@ -31,7 +40,8 @@ public class SliderManager : MonoBehaviour
         var slider = GameObject.Find("SliderCroissance").GetComponent<Slider>();
         
         _coefCroissance = (int)slider.value == 0 ? 0.3f : (int)slider.value == 1 ? 0.4f : 0.5f;
-        var scale = slider.value == 0 ? 0.3f : _coefCroissance;
+        var scale = slider.value == 0 ? 0.3f : _coefCroissance; 
+
         
         foreach (var tree in _trees)
         {
@@ -46,7 +56,7 @@ public class SliderManager : MonoBehaviour
             {
                 StartCoroutine(ChangeTaille(tree, taille));
             }
-                
+          
         });
 
     }
@@ -67,8 +77,17 @@ public class SliderManager : MonoBehaviour
 
     private void Update()
     {
-
+         if (_coefCroissance == 0.3f){
+                _parcelleRender.material = materialLight1;
+            }
+            if (_coefCroissance == 0.4f){
+                    _parcelleRender.material = materialLight2;
+                }
+            if (_coefCroissance == 0.5f){
+                   _parcelleRender.material = materialLight3;
+                }
+       
     }
-  
+    
 
 }

@@ -3823,6 +3823,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8765edd43070473478762d8822c7a870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  materialLight1: {fileID: 2100000, guid: 257a0d3d41ad4fe4fa8993d5d10b184a, type: 2}
+  materialLight2: {fileID: 2100000, guid: 24921ffd72b5d924fb85cbdc98423f4d, type: 2}
+  materialLight3: {fileID: 2100000, guid: 928381965472bc24e8219818883612f7, type: 2}
 --- !u!23 &196424791607151216
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3976,6 +3979,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8765edd43070473478762d8822c7a870, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  materialLight1: {fileID: 2100000, guid: 257a0d3d41ad4fe4fa8993d5d10b184a, type: 2}
+  materialLight2: {fileID: 2100000, guid: 24921ffd72b5d924fb85cbdc98423f4d, type: 2}
+  materialLight3: {fileID: 2100000, guid: 928381965472bc24e8219818883612f7, type: 2}
 --- !u!23 &2975327212452052496
 MeshRenderer:
   m_ObjectHideFlags: 0
