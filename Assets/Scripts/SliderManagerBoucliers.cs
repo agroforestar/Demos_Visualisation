@@ -28,6 +28,7 @@ public class SliderManagerBoucliers : MonoBehaviour
     public GameObject boucliers2;
     public GameObject boucliers3;
   
+    public GameObject newObject;
     
     //private GameObject _parcelle;
     //private Renderer _parcelleRender;
@@ -37,6 +38,12 @@ public class SliderManagerBoucliers : MonoBehaviour
         //_parcelle = GameObject.FindGameObjectWithTag("parcelle");
         //_parcelleRender = _parcelle.GetComponent<Renderer>();
        
+        
+        //Pour faire spawn dès le début les boucliers 2
+        newObject = Instantiate(boucliers2, transform.position, Quaternion.identity);
+        newObject.transform.SetParent(ARManager._newParcelle.transform);
+        
+
         _trees = GameObject.FindGameObjectsWithTag("tree").ToList();
         _treeRender = new MeshRenderer[_trees.Count];
         for (int i = 0; i < _trees.Count; i++)
@@ -56,30 +63,39 @@ public class SliderManagerBoucliers : MonoBehaviour
         {
             _coefCroissance = (int)value == 0 ? 0.3f : (int)value == 1 ? 0.4f : 0.5f;
             var taille = value == 0 ? 0.3f : _coefCroissance;
-            
-            if (_coefCroissance == 0.3f){
-                SpawnPrefab(boucliers1);
-                Destroy(boucliers2);
-                Destroy(boucliers3);
-            }
-            if (_coefCroissance == 0.4f){
-                SpawnPrefab(boucliers2);
-                Destroy(boucliers1);
-                Destroy(boucliers3);
-            }
-            if (_coefCroissance == 0.5f){
-                SpawnPrefab(boucliers3);
-                Destroy(boucliers1);
-                Destroy(boucliers2);
-            }
-
-
+        
             StopAllCoroutines();
             foreach (var tree in _trees)
             {
                 StartCoroutine(ChangeTaille(tree, taille));
             }
+
+             if (_coefCroissance == 0.3f){
+                print("if 1");
                 
+                if (newObject != null)
+                    Destroy(newObject);
+                
+                SpawnPrefab(boucliers1);
+
+            }
+            if (_coefCroissance == 0.4f){
+                print("if 2");
+                
+                if (newObject != null)
+                    Destroy(newObject);
+                
+                SpawnPrefab(boucliers2);             
+            }
+            if (_coefCroissance == 0.5f){
+                print("if 3");
+                
+                if (newObject != null)
+                    Destroy(newObject);
+                
+                SpawnPrefab(boucliers3);   
+            }
+      
         });
 
     }
@@ -100,14 +116,24 @@ public class SliderManagerBoucliers : MonoBehaviour
 
     private void Update()
     {
-        
-
-       
+       /*
+        if (_coefCroissance == 0.3f){
+            _parcelleRender.material = materialLight1;
+            }
+        if (_coefCroissance == 0.4f){
+            _parcelleRender.material = materialLight2;
+            }
+        if (_coefCroissance == 0.5f){
+            _parcelleRender.material = materialLight3;
+            }
+        */
     }
   
-  private void SpawnPrefab(GameObject prefab)
+  public void SpawnPrefab(GameObject prefab)
     {
-        Instantiate(prefab, transform.position, Quaternion.identity);
+        newObject = Instantiate(prefab, transform.position, Quaternion.identity);
+        newObject.transform.SetParent(ARManager._newParcelle.transform);
+        //newObject.transform.localPosition = Vector3.zero;
     }
 
 }

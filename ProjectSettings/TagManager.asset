@@ -21,6 +21,8 @@ TagManager:
   - Shield3L
   - tractor
   - parcelle
+  - Shield4L
+  - Shield10
   layers:
   - Default
   - TransparentFX

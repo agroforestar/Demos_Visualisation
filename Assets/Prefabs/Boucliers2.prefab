@@ -525,7 +525,7 @@ GameObject:
   - component: {fileID: 1702352260635665204}
   - component: {fileID: 2482652444075851043}
   m_Layer: 0
-  m_Name: Boucliers2
+  m_Name: boucliers2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
