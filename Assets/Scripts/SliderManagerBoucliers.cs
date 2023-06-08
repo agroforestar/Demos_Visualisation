@@ -20,9 +20,11 @@ public class SliderManagerBoucliers : MonoBehaviour
     private MeshRenderer[] _treeRender;
     private float _coefCroissance = 0.3f;
 
-    //public Material materialLight1;
-    //public Material materialLight2;
-    //public Material materialLight3;
+    /*
+    public Material materialLight1;
+    public Material materialLight2;
+    public Material materialLight3;
+    */
 
     public GameObject boucliers1;
     public GameObject boucliers2;
@@ -30,18 +32,26 @@ public class SliderManagerBoucliers : MonoBehaviour
   
     public GameObject newObject;
     
-    //private GameObject _parcelle;
-    //private Renderer _parcelleRender;
+    /*
+    private GameObject _parcelle;
+    private Renderer _parcelleRender;
+    */
 
     void Start()
     {
-        //_parcelle = GameObject.FindGameObjectWithTag("parcelle");
-        //_parcelleRender = _parcelle.GetComponent<Renderer>();
-       
+        
+        /*
+        _parcelle = GameObject.FindGameObjectWithTag("parcelle");
+        _parcelleRender = _parcelle.GetComponent<Renderer>();
+        */
         
         //Pour faire spawn dès le début les boucliers 2
         newObject = Instantiate(boucliers2, transform.position, Quaternion.identity);
         newObject.transform.SetParent(ARManager._newParcelle.transform);
+        newObject.transform.position = ARManager._newParcelle.transform.position;
+
+        var pos = newObject.transform.position;
+        newObject.transform.position = new Vector3(pos.x, ARManager._newParcelle.transform.position.y, pos.z);
         
 
         _trees = GameObject.FindGameObjectsWithTag("tree").ToList();
@@ -70,7 +80,7 @@ public class SliderManagerBoucliers : MonoBehaviour
                 StartCoroutine(ChangeTaille(tree, taille));
             }
 
-             if (_coefCroissance == 0.3f){
+            if (_coefCroissance == 0.3f){
                 print("if 1");
                 
                 if (newObject != null)
@@ -133,7 +143,10 @@ public class SliderManagerBoucliers : MonoBehaviour
     {
         newObject = Instantiate(prefab, transform.position, Quaternion.identity);
         newObject.transform.SetParent(ARManager._newParcelle.transform);
-        //newObject.transform.localPosition = Vector3.zero;
+        newObject.transform.position = ARManager._newParcelle.transform.position;
+
+        var pos = newObject.transform.position;
+        newObject.transform.position = new Vector3(pos.x, ARManager._newParcelle.transform.position.y, pos.z);
     }
 
 }

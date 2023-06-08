@@ -23,6 +23,7 @@ TagManager:
   - parcelle
   - Shield4L
   - Shield10
+  - Shield11
   layers:
   - Default
   - TransparentFX

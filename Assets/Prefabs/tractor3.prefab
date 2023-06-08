@@ -3810,6 +3810,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91fa437b74d7499418d7e710d4d954db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boucliers1: {fileID: 0}
+  boucliers2: {fileID: 0}
+  boucliers3: {fileID: 0}
 --- !u!23 &196424791607151216
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3863,9 +3866,9 @@ GameObject:
   - component: {fileID: 9194942520035881717}
   - component: {fileID: 8686802729375395668}
   - component: {fileID: 3746685913425634812}
-  - component: {fileID: 4022618209359499020}
   - component: {fileID: 2129105681848288001}
   - component: {fileID: 2975327212452052496}
+  - component: {fileID: 377040881602965924}
   m_Layer: 0
   m_Name: tractor
   m_TagString: Untagged
@@ -3923,18 +3926,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!114 &4022618209359499020
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3570489886075802386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91fa437b74d7499418d7e710d4d954db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!138 &2129105681848288001
 FixedJoint:
   m_ObjectHideFlags: 0
@@ -3992,6 +3983,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &377040881602965924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3570489886075802386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91fa437b74d7499418d7e710d4d954db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boucliers1: {fileID: 0}
+  boucliers2: {fileID: 0}
+  boucliers3: {fileID: 0}
 --- !u!1 &3583963583957654666
 GameObject:
   m_ObjectHideFlags: 0

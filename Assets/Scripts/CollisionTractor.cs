@@ -16,11 +16,29 @@ public class CollisionTractor : MonoBehaviour
     private MeshRenderer[] _treeRender;
     private float _coefCroissance = 0.3f;
 
+    /*
+    public GameObject boucliers1;
+    public GameObject boucliers2;
+    public GameObject boucliers3;
+  
+    public static GameObject newObject;
+    */
+
+
     
     private bool _hit;
 
     void Start()
     {
+        
+       
+        /*Pour faire spawn dès le début les boucliers 2
+        newObject = Instantiate(boucliers2, transform.position, Quaternion.identity);
+        newObject.transform.SetParent(ARManager._newParcelle.transform);
+        newObject.transform.position = ARManager._newParcelle.transform.position;
+        newObject.transform.localPosition = Vector3.zero;
+        */
+        
         _trees = GameObject.FindGameObjectsWithTag("tree").ToList();
         _treeRender = new MeshRenderer[_trees.Count];
         for (int i = 0; i < _trees.Count; i++)
@@ -44,6 +62,37 @@ public class CollisionTractor : MonoBehaviour
             {
                 StartCoroutine(ChangeTaille(tree, taille));
             }
+
+           
+            /*
+            if (_coefCroissance == 0.3f){
+                print("if 1");
+                
+                if (newObject != null)
+                    Destroy(newObject);
+                
+                SpawnPrefab(boucliers1);
+
+            }
+            if (_coefCroissance == 0.4f){
+                print("if 2");
+                
+                if (newObject != null)
+                    Destroy(newObject);
+                
+                SpawnPrefab(boucliers2);             
+            }
+            if (_coefCroissance == 0.5f){
+                print("if 3");
+                
+                if (newObject != null)
+                    Destroy(newObject);
+                
+                SpawnPrefab(boucliers3);   
+            }
+            */
+
+
                 
         });
 
@@ -139,5 +188,15 @@ public class CollisionTractor : MonoBehaviour
         }
 
     }
+
+    /*
+     public void SpawnPrefab(GameObject prefab)
+    {
+        newObject = Instantiate(prefab, transform.position, Quaternion.identity);
+        newObject.transform.SetParent(ARManager._newParcelle.transform);
+        newObject.transform.position = ARManager._newParcelle.transform.position;
+        newObject.transform.localPosition = Vector3.zero;
+    }
+    */
 
 }

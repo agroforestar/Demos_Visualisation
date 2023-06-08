@@ -386,6 +386,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d0e1bcc5b14ff141a3e4976a232b741, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  materialLight1: {fileID: 2100000, guid: 257a0d3d41ad4fe4fa8993d5d10b184a, type: 2}
+  materialLight2: {fileID: 2100000, guid: 24921ffd72b5d924fb85cbdc98423f4d, type: 2}
+  materialLight3: {fileID: 2100000, guid: 928381965472bc24e8219818883612f7, type: 2}
   boucliers1: {fileID: 3626355088437297467, guid: 04e96f085781854499c1cf9d2f543b74,
     type: 3}
   boucliers2: {fileID: 3626355088437297467, guid: bdcaf5b7325a02d4fba13baf56e74229,

@@ -25,7 +25,7 @@ public class ARManagerLight : MonoBehaviour
     [SerializeField] private GameObject cursor;
     [SerializeField] private TextMeshProUGUI adviceText;
 
-    public GameObject _newParcelle;
+    public static GameObject _newParcelle;
     
     private GameObject _panel;
     private GameObject _panelLegend;

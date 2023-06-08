@@ -27,65 +27,72 @@ public class FollowPathBigTrees : MonoBehaviour
         if(tag == "Shield2")
         {
             distanceTravelled += speed * Time.deltaTime;
-            transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled + 48); 
-            transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled + 48); 
+            transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled + 36.9f); 
+            transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled + 36.9f); 
         }
 
         if(tag == "Shield3")
         {
             distanceTravelled += speed * Time.deltaTime;
-            transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled + 96); 
-            transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled + 96);  
+            transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled + 73.8f); 
+            transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled + 73.8f);  
         }
 
 
         if(tag == "Shield4")
         {
             distanceTravelled += speed * Time.deltaTime;
-            transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled + 144); 
-            transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled + 144); 
+            transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled + 110.7f); 
+            transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled + 110.7f); 
         }
 
         if(tag == "Shield5")
         {
             distanceTravelled += speed * Time.deltaTime;
-            transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled + 192); 
-            transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled + 192); 
+            transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled + 147.6f); 
+            transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled + 147.6f); 
         }
 
         if(tag == "Shield6")
         {
             distanceTravelled += speed * Time.deltaTime;
-            transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled + 240); 
-            transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled + 240);
+            transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled + 184.5f); 
+            transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled + 184.5f);
         }
 
         if(tag == "Shield7")
         {
             distanceTravelled += speed * Time.deltaTime;
-            transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled + 288); 
-            transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled + 288); 
+            transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled + 221.4f); 
+            transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled + 221.4f); 
         }
 
         if(tag == "Shield8")
         {
             distanceTravelled += speed * Time.deltaTime;
-            transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled + 329); 
-            transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled + 329);
+            transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled + 258.3f); 
+            transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled + 258.3f);
         }
 
         if(tag == "Shield9")
         {
             distanceTravelled += speed * Time.deltaTime;
-            transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled + 376); 
-            transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled + 376);
+            transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled + 295.2f); 
+            transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled + 295.2f);
         }
 
         if(tag == "Shield10")
         {
             distanceTravelled += speed * Time.deltaTime;
-            transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled + 423); 
-            transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled + 423);
+            transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled + 332.1f); 
+            transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled + 332.1f);
+        }
+
+        if(tag == "Shield11")
+        {
+            distanceTravelled += speed * Time.deltaTime;
+            transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled + 369.0f); 
+            transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled + 369.0f);
         }
 
 
@@ -101,22 +108,22 @@ public class FollowPathBigTrees : MonoBehaviour
         if(tag == "Shield2L")
         {
             distanceTravelled += speed * Time.deltaTime;
-            transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled + 40); 
-            transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled + 40);
+            transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled + 45); 
+            transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled + 45);
         }
 
            if(tag == "Shield3L")
         {
             distanceTravelled += speed * Time.deltaTime;
-            transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled + 80); 
-            transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled + 80);
+            transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled + 90); 
+            transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled + 90);
         }
 
             if(tag == "Shield4L")
         {
             distanceTravelled += speed * Time.deltaTime;
-            transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled + 120); 
-            transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled + 120);
+            transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled + 135); 
+            transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled + 135);
         }
 
 
