@@ -23,13 +23,14 @@ public class CollisionTractor2 : MonoBehaviour
     
     private bool _hit;
 
+    //
     public Material materialLight1;
     public Material materialLight2;
     public Material materialLight3;
     
     private GameObject _parcelle;
     private Renderer _parcelleRender;
-
+    //
 
     void Start()
     {
@@ -39,8 +40,10 @@ public class CollisionTractor2 : MonoBehaviour
              //_tractorsRender[i] = _tractorsRender[i].GetComponent<MeshRenderer>();
 
 
+        //
         _parcelle = GameObject.FindGameObjectWithTag("parcelle");
         _parcelleRender = _parcelle.GetComponent<Renderer>();
+        //
 
         _trees = GameObject.FindGameObjectsWithTag("tree").ToList();
         _treeRender = new MeshRenderer[_trees.Count];
@@ -75,6 +78,7 @@ public class CollisionTractor2 : MonoBehaviour
 
     private void Update()
     {
+        //
         if (_coefCroissance == 0.3f){
             _parcelleRender.material = materialLight1;
             }
@@ -84,6 +88,7 @@ public class CollisionTractor2 : MonoBehaviour
         if (_coefCroissance == 0.5f){
             _parcelleRender.material = materialLight3;
             }
+        //    
      
     }
 
