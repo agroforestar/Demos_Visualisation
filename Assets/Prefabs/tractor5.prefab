@@ -3584,6 +3584,7 @@ GameObject:
   - component: {fileID: 8082539796466395005}
   - component: {fileID: 3417413594883251063}
   - component: {fileID: 196424791607151216}
+  - component: {fileID: 2680482279791895641}
   m_Layer: 0
   m_Name: planter_lod0
   m_TagString: Untagged
@@ -3852,6 +3853,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2680482279791895641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3504012639190122610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f5436c1015f3564da4d57a1737678cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boucliers1: {fileID: 0}
+  boucliers2: {fileID: 0}
+  boucliers3: {fileID: 0}
+  materialLight1: {fileID: 0}
+  materialLight2: {fileID: 0}
+  materialLight3: {fileID: 0}
 --- !u!1 &3570489886075802386
 GameObject:
   m_ObjectHideFlags: 0
