@@ -25,13 +25,27 @@ public class CollisionTractorBoucliers : MonoBehaviour
     //
 
 
+    //
+    private List<GameObject> _tractors = new List<GameObject>();
+    private MeshRenderer[] _tractorRender;
+    //
+
+
     
     private bool _hit;
 
     void Start()
     {
         
-       
+        //
+        _tractors = GameObject.FindGameObjectsWithTag("tractor").ToList();
+        _tractorRender = new MeshRenderer[_tractors.Count];
+        for (int i = 0; i < _tractors.Count; i++)
+            _tractorRender[i] = _tractors[i].GetComponent<MeshRenderer>();
+        //
+
+
+
         //Pour faire spawn dès le début les boucliers 2
         newObject = Instantiate(boucliers2, transform.position, Quaternion.identity);
         newObject.transform.SetParent(ARManagerBoucliers._newParcelle.transform);
@@ -143,6 +157,13 @@ public class CollisionTractorBoucliers : MonoBehaviour
 
             if (TractorsBoucliers.TractorInitialisation){
                 other.gameObject.GetComponent<MeshRenderer>().material.color = Color.red;
+
+                //
+                for (int i = 0; i < _tractors.Count; i++)
+                    _tractors[i].gameObject.GetComponent<MeshRenderer>().material.color = Color.red;
+                //    
+
+
             }else{
             ptill();
             }
@@ -169,6 +190,11 @@ public class CollisionTractorBoucliers : MonoBehaviour
     private void OnTriggerExit(Collider other){
         if(other.gameObject.CompareTag("tree")){
             other.gameObject.GetComponent<MeshRenderer>().material.color = Color.white;
+
+            //
+            for (int i = 0; i < _tractors.Count; i++)
+                _tractors[i].gameObject.GetComponent<MeshRenderer>().material.color = Color.white;
+            //    
         }
         if(other.gameObject.CompareTag("Ptille")){
             trigger.Remove(other.gameObject);

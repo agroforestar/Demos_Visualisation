@@ -3979,10 +3979,14 @@ struct CollisionTractorBoucliersLight_tBEFC3BAB33007CC32296E3D039DF3057B046F14E 
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ____parcelle_14;
 	// UnityEngine.Renderer CollisionTractorBoucliersLight::_parcelleRender
 	Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* ____parcelleRender_15;
+	// System.Collections.Generic.List`1<UnityEngine.GameObject> CollisionTractorBoucliersLight::_tractors
+	List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* ____tractors_16;
+	// UnityEngine.MeshRenderer[] CollisionTractorBoucliersLight::_tractorRender
+	MeshRendererU5BU5D_tDF429EF168050A5CE085D0B51909A6AE2067E446* ____tractorRender_17;
 	// System.Boolean CollisionTractorBoucliersLight::_hit
-	bool ____hit_16;
+	bool ____hit_18;
 	// System.Collections.Generic.List`1<UnityEngine.GameObject> CollisionTractorBoucliersLight::trigger
-	List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* ___trigger_17;
+	List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* ___trigger_19;
 };
 
 // CreateObj

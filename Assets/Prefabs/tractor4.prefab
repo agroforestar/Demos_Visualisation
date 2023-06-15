@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7688988025784460445}
   m_Layer: 0
   m_Name: wheel2
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 6965885314105748789}
   m_Layer: 0
   m_Name: discsupport1
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -262,7 +262,7 @@ GameObject:
   - component: {fileID: 6252980807442027887}
   m_Layer: 0
   m_Name: planter_frame
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -345,7 +345,7 @@ GameObject:
   - component: {fileID: 182814465524996881}
   m_Layer: 0
   m_Name: wheel4
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -428,7 +428,7 @@ GameObject:
   - component: {fileID: 11728046950972178}
   m_Layer: 0
   m_Name: disc5
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -511,7 +511,7 @@ GameObject:
   - component: {fileID: 4972159667099848364}
   m_Layer: 0
   m_Name: deposit2
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -594,7 +594,7 @@ GameObject:
   - component: {fileID: 1512216137600172441}
   m_Layer: 0
   m_Name: tire2
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -760,7 +760,7 @@ GameObject:
   - component: {fileID: 355757072311109890}
   m_Layer: 0
   m_Name: disc
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1259,7 +1259,7 @@ GameObject:
   - component: {fileID: 412172368825215287}
   m_Layer: 0
   m_Name: line3
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1342,7 +1342,7 @@ GameObject:
   - component: {fileID: 2695826693785055437}
   m_Layer: 0
   m_Name: deposit1
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1757,7 +1757,7 @@ GameObject:
   - component: {fileID: 7870988527651267300}
   m_Layer: 0
   m_Name: wheel7
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1923,7 +1923,7 @@ GameObject:
   - component: {fileID: 854308956445771230}
   m_Layer: 0
   m_Name: wheel10
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2089,7 +2089,7 @@ GameObject:
   - component: {fileID: 7318032360776666801}
   m_Layer: 0
   m_Name: disc9
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2255,7 +2255,7 @@ GameObject:
   - component: {fileID: 3293102974874983610}
   m_Layer: 0
   m_Name: wheel3
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2504,7 +2504,7 @@ GameObject:
   - component: {fileID: 1330234184023746058}
   m_Layer: 0
   m_Name: wheel9
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2753,7 +2753,7 @@ GameObject:
   - component: {fileID: 7352987491815577271}
   m_Layer: 0
   m_Name: disc2
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2919,7 +2919,7 @@ GameObject:
   - component: {fileID: 3316975549278489264}
   m_Layer: 0
   m_Name: discsupport5
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3002,7 +3002,7 @@ GameObject:
   - component: {fileID: 5318551400283356929}
   m_Layer: 0
   m_Name: disc3
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3085,7 +3085,7 @@ GameObject:
   - component: {fileID: 2133169655136185012}
   m_Layer: 0
   m_Name: header
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3251,7 +3251,7 @@ GameObject:
   - component: {fileID: 6253006102941350552}
   m_Layer: 0
   m_Name: wheel8
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3500,7 +3500,7 @@ GameObject:
   - component: {fileID: 1951875171212725670}
   m_Layer: 0
   m_Name: disc4
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4263,7 +4263,7 @@ GameObject:
   - component: {fileID: 6595945836040492334}
   m_Layer: 0
   m_Name: discsupport2
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4429,7 +4429,7 @@ GameObject:
   - component: {fileID: 3366273314548742635}
   m_Layer: 0
   m_Name: line4
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4596,7 +4596,7 @@ GameObject:
   - component: {fileID: 4136398756389551075}
   m_Layer: 0
   m_Name: tractor4
-  m_TagString: tractor
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4869,7 +4869,7 @@ GameObject:
   - component: {fileID: 2951050829796504740}
   m_Layer: 0
   m_Name: wheel1
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4952,7 +4952,7 @@ GameObject:
   - component: {fileID: 7741174153828347259}
   m_Layer: 0
   m_Name: deposit
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5035,7 +5035,7 @@ GameObject:
   - component: {fileID: 7791012967494792400}
   m_Layer: 0
   m_Name: line
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5201,7 +5201,7 @@ GameObject:
   - component: {fileID: 8838060084079121806}
   m_Layer: 0
   m_Name: tire
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5367,7 +5367,7 @@ GameObject:
   - component: {fileID: 7558428970384655015}
   m_Layer: 0
   m_Name: disc6
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5699,7 +5699,7 @@ GameObject:
   - component: {fileID: 319536185826775320}
   m_Layer: 0
   m_Name: disc7
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5782,7 +5782,7 @@ GameObject:
   - component: {fileID: 2586051165672942675}
   m_Layer: 0
   m_Name: wheel6
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6031,7 +6031,7 @@ GameObject:
   - component: {fileID: 1645444682653719491}
   m_Layer: 0
   m_Name: wheel11
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6114,7 +6114,7 @@ GameObject:
   - component: {fileID: 7719517131794064017}
   m_Layer: 0
   m_Name: wheel
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6197,7 +6197,7 @@ GameObject:
   - component: {fileID: 6691781165755601262}
   m_Layer: 0
   m_Name: pin
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6280,7 +6280,7 @@ GameObject:
   - component: {fileID: 8403928203044897480}
   m_Layer: 0
   m_Name: wheel5
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6446,7 +6446,7 @@ GameObject:
   - component: {fileID: 3695694954718181996}
   m_Layer: 0
   m_Name: line5
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6695,7 +6695,7 @@ GameObject:
   - component: {fileID: 9061381277037373305}
   m_Layer: 0
   m_Name: discsupport
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6778,7 +6778,7 @@ GameObject:
   - component: {fileID: 212639698243561037}
   m_Layer: 0
   m_Name: discsupport4
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7027,7 +7027,7 @@ GameObject:
   - component: {fileID: 1910928536838372189}
   m_Layer: 0
   m_Name: deposit3
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7110,7 +7110,7 @@ GameObject:
   - component: {fileID: 3901197188037093338}
   m_Layer: 0
   m_Name: disc10
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7193,7 +7193,7 @@ GameObject:
   - component: {fileID: 4917367414125605102}
   m_Layer: 0
   m_Name: discsupport3
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7442,7 +7442,7 @@ GameObject:
   - component: {fileID: 9077333905087317187}
   m_Layer: 0
   m_Name: tire1
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7525,7 +7525,7 @@ GameObject:
   - component: {fileID: 3265276582701974014}
   m_Layer: 0
   m_Name: disc1
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7691,7 +7691,7 @@ GameObject:
   - component: {fileID: 776814270669167564}
   m_Layer: 0
   m_Name: disc11
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7774,7 +7774,7 @@ GameObject:
   - component: {fileID: 6405344860820197534}
   m_Layer: 0
   m_Name: line1
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8267,7 +8267,7 @@ GameObject:
   - component: {fileID: 5782353244046931780}
   m_Layer: 0
   m_Name: line2
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8350,7 +8350,7 @@ GameObject:
   - component: {fileID: 5431583464383909688}
   m_Layer: 0
   m_Name: tire3
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8765,7 +8765,7 @@ GameObject:
   - component: {fileID: 998133103022358193}
   m_Layer: 0
   m_Name: disc8
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

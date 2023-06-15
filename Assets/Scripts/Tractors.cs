@@ -39,14 +39,9 @@ public class Tractors : MonoBehaviour
 
     private GameObject _play;
 
-    /*
-    public GameObject newObject;
-    */
-
     // Start is called before the first frame update
     void Start()
     {
-        
         _sizePanel = GameObject.Find("SizePanel");
         _panel = GameObject.Find("Panel");
         _sliderCroissance = GameObject.Find("SliderCroissance");
@@ -155,14 +150,6 @@ public class Tractors : MonoBehaviour
             _sliderCroissance.SetActive(false);
             _play.SetActive(false);
             
-            /*
-            newObject = CollisionTractor.newObject;
-            //
-            if (newObject != null){
-                Destroy(newObject);
-            }
-            */
-
             Destroy(_newtractor);
         }
     }
@@ -210,7 +197,6 @@ public class Tractors : MonoBehaviour
         _sizePanel.SetActive(false);
 
         StartTractorInit();
-
     }
     
     public void StartTractorInit()
