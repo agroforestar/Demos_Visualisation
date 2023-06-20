@@ -47,12 +47,8 @@ public class CollisionTractorBoucliers : MonoBehaviour
 
 
         //Pour faire spawn dès le début les boucliers 2
-        newObject = Instantiate(boucliers2, transform.position, Quaternion.identity);
+        newObject = Instantiate(boucliers2, ARManagerBoucliers._newParcelle.transform.position, ARManagerBoucliers._newParcelle.transform.rotation);
         newObject.transform.SetParent(ARManagerBoucliers._newParcelle.transform);
-        newObject.transform.position = ARManagerBoucliers._newParcelle.transform.position;
-        
-        var pos = newObject.transform.position;
-        newObject.transform.position = new Vector3(pos.x, ARManagerBoucliers._newParcelle.transform.position.y, pos.z);
         //
         
         _trees = GameObject.FindGameObjectsWithTag("tree").ToList();
@@ -220,12 +216,8 @@ public class CollisionTractorBoucliers : MonoBehaviour
     //
      public void SpawnPrefab(GameObject prefab)
     {
-        newObject = Instantiate(prefab, transform.position, Quaternion.identity);
+        newObject = Instantiate(prefab, ARManagerBoucliers._newParcelle.transform.position, ARManagerBoucliers._newParcelle.transform.rotation);
         newObject.transform.SetParent(ARManagerBoucliers._newParcelle.transform);
-        newObject.transform.position = ARManagerBoucliers._newParcelle.transform.position;
-        
-        var pos = newObject.transform.position;
-        newObject.transform.position = new Vector3(pos.x, ARManagerBoucliers._newParcelle.transform.position.y, pos.z);
     }
     //
 

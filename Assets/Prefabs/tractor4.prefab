@@ -1425,7 +1425,7 @@ GameObject:
   - component: {fileID: 4028144271239633379}
   m_Layer: 0
   m_Name: backwheels
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1508,7 +1508,7 @@ GameObject:
   - component: {fileID: 753366950769063097}
   m_Layer: 0
   m_Name: pedal
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1591,7 +1591,7 @@ GameObject:
   - component: {fileID: 3857164745857898546}
   m_Layer: 0
   m_Name: front_l_wheel
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2006,7 +2006,7 @@ GameObject:
   - component: {fileID: 4945629709225971926}
   m_Layer: 0
   m_Name: front_r_wheel
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2172,7 +2172,7 @@ GameObject:
   - component: {fileID: 1320169908757095287}
   m_Layer: 0
   m_Name: tractor_body
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4097,7 +4097,7 @@ GameObject:
   - component: {fileID: 6329556785562467028}
   m_Layer: 0
   m_Name: wheel
-  m_TagString: Untagged
+  m_TagString: tractor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

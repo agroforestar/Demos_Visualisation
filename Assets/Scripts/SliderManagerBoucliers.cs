@@ -46,12 +46,8 @@ public class SliderManagerBoucliers : MonoBehaviour
         */
         
         //Pour faire spawn dès le début les boucliers 2
-        newObject = Instantiate(boucliers2, transform.position, Quaternion.identity);
+        newObject = Instantiate(boucliers2, ARManager._newParcelle.transform.position, ARManager._newParcelle.transform.rotation);
         newObject.transform.SetParent(ARManager._newParcelle.transform);
-        newObject.transform.position = ARManager._newParcelle.transform.position;
-
-        var pos = newObject.transform.position;
-        newObject.transform.position = new Vector3(pos.x, ARManager._newParcelle.transform.position.y, pos.z);
         
 
         _trees = GameObject.FindGameObjectsWithTag("tree").ToList();
@@ -141,12 +137,9 @@ public class SliderManagerBoucliers : MonoBehaviour
   
   public void SpawnPrefab(GameObject prefab)
     {
-        newObject = Instantiate(prefab, transform.position, Quaternion.identity);
+        newObject = Instantiate(prefab, ARManager._newParcelle.transform.position, ARManager._newParcelle.transform.rotation);
         newObject.transform.SetParent(ARManager._newParcelle.transform);
-        newObject.transform.position = ARManager._newParcelle.transform.position;
-
-        var pos = newObject.transform.position;
-        newObject.transform.position = new Vector3(pos.x, ARManager._newParcelle.transform.position.y, pos.z);
+        
     }
 
 }

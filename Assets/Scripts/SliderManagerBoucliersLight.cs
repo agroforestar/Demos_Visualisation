@@ -42,7 +42,7 @@ public class SliderManagerBoucliersLight : MonoBehaviour
        
         
         //Pour faire spawn dès le début les boucliers 2
-        newObject2 = Instantiate(boucliers2, transform.position, Quaternion.identity);
+        newObject2 = Instantiate(boucliers2, ARManagerLight._newParcelle.transform.position, ARManagerLight._newParcelle.transform.rotation);
         newObject2.transform.SetParent(ARManagerLight._newParcelle.transform);
         
 
@@ -130,12 +130,8 @@ public class SliderManagerBoucliersLight : MonoBehaviour
   
   public void SpawnPrefab(GameObject prefab)
     {
-        newObject2 = Instantiate(prefab, transform.position, Quaternion.identity);
+        newObject2 = Instantiate(prefab, ARManagerLight._newParcelle.transform.position, ARManagerLight._newParcelle.transform.rotation);
         newObject2.transform.SetParent(ARManagerLight._newParcelle.transform);
-        newObject2.transform.position = ARManagerLight._newParcelle.transform.position;
-
-        var pos = newObject2.transform.position;
-        newObject2.transform.position = new Vector3(pos.x, ARManagerLight._newParcelle.transform.position.y, pos.z);
     }
 
 }
