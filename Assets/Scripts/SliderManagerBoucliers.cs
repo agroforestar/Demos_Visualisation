@@ -77,25 +77,18 @@ public class SliderManagerBoucliers : MonoBehaviour
             }
 
             if (_coefCroissance == 0.3f){
-                print("if 1");
-                
                 if (newObject != null)
                     Destroy(newObject);
                 
                 SpawnPrefab(boucliers1);
-
             }
             if (_coefCroissance == 0.4f){
-                print("if 2");
-                
                 if (newObject != null)
                     Destroy(newObject);
                 
                 SpawnPrefab(boucliers2);             
             }
             if (_coefCroissance == 0.5f){
-                print("if 3");
-                
                 if (newObject != null)
                     Destroy(newObject);
                 
@@ -139,7 +132,6 @@ public class SliderManagerBoucliers : MonoBehaviour
     {
         newObject = Instantiate(prefab, ARManager._newParcelle.transform.position, ARManager._newParcelle.transform.rotation);
         newObject.transform.SetParent(ARManager._newParcelle.transform);
-        
     }
 
 }

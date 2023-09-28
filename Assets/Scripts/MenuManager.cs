@@ -11,13 +11,6 @@ public class MenuManager : MonoBehaviour
          Screen.orientation = ScreenOrientation.LandscapeLeft;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-
     public void ChangeScene(string _sceneName)
     {
         SceneManager.LoadScene(_sceneName);

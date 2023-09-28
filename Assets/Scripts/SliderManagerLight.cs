@@ -55,12 +55,9 @@ public class SliderManagerLight : MonoBehaviour
             foreach (var tree in _trees)
             {
                 StartCoroutine(ChangeTaille(tree, taille));
-            }
-                
+            }     
         });
-
     }
-    
     IEnumerator ChangeTaille(GameObject go, float scale){
         float desriedTime = 2f;
         float actualTime = 0f;
@@ -72,12 +69,10 @@ public class SliderManagerLight : MonoBehaviour
 
             yield return null;
         }
-
     }
 
     private void Update()
-    {
-        
+    { 
         if (_coefCroissance == 0.3f){
             _parcelleRender.material = materialLight1;
             }
@@ -87,7 +82,6 @@ public class SliderManagerLight : MonoBehaviour
         if (_coefCroissance == 0.5f){
             _parcelleRender.material = materialLight3;
             }
-       
     }
   
 

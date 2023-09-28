@@ -11,12 +11,9 @@ public class FollowPathTracteur : MonoBehaviour
     public float speed = 1.0f;
     public float distanceTravelled;
 
-    
     // Update is called once per frame
     void Update()
-    {
-
-        
+    {        
         if(tag == "Shield1")
         {
             distanceTravelled += speed * Time.deltaTime;
